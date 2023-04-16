@@ -8,9 +8,9 @@ public class DatabaseConnection {
 
     public Connection getConnection(){
         String databaseName="vizsgaremek";
-        String databaseUser="demo";
-        String databasePassword="password";
-        String url="jdbc:mysql://localhost/"+ databaseName;
+        String databaseUser="de";
+        String databasePassword="";
+        String url="jdbc:mysql://localhost/" + databaseName;
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -19,6 +19,7 @@ public class DatabaseConnection {
             e.printStackTrace();
             e.getCause();
         }
+
         return databaseLink;
     }
 }
