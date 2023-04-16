@@ -1,14 +1,16 @@
 package com.example.vizsgaremek_autok;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import javafx.event.ActionEvent;
 
 public class LoginController {
-    @FXML
-    private Label welcomeText;
+@FXML
+    private Button ExitButton;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
+public void ExitButtonOnAction(ActionEvent event){
+    Stage stage= (Stage) ExitButton.getScene().getWindow();
+    stage.close();
+}
 }
