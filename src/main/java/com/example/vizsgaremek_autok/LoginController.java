@@ -13,6 +13,8 @@ import javafx.event.ActionEvent;
 
 import java.io.File;
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 import java.net.URL;
@@ -44,7 +46,7 @@ public class LoginController implements Initializable {
 
 
     public void loginButtonOnAction(ActionEvent event){
-        if (usernameTextField.getText().isBlank()==false && enterpasswordField.getText().isBlank()==false){
+        if (usernameTextField.getText().isBlank() == false && enterpasswordField.getText().isBlank() == false){
             validateLogin();
         }else {
             loginMessageLabel.setText("Please enter username and password");
@@ -59,10 +61,30 @@ public void ExitButtonOnAction(ActionEvent event){
 }
 
 public void validateLogin(){
-    DatabaseConnection connectNow=new DatabaseConnection();
+    DatabaseConnection connectNow= new DatabaseConnection();
     Connection connectDB = connectNow.getConnection();
 
-    String verifyLogin=""
+    String verifyLogin="SELECT * FROM user_data WHERE username = '"+ usernameTextField.getText() + "' AND password = '" + enterpasswordField.getText() + "'";
+
+    try {
+
+        Statement statement=connectDB.createStatement();
+        ResultSet queryResult = statement.executeQuery(verifyLogin);
+
+        while (queryResult.next()){
+            if (queryResult.getInt(1) ==1) {
+                loginMessageLabel.setText("GG jo lett! faszagecixdd");
+            } else {
+                loginMessageLabel.setText("Login failed. Please try Again.");
+            }
+
+        }
+
+
+    }catch (Exception e) {
+        e.printStackTrace();
+        e.getCause();
+    }
 }
 
 
