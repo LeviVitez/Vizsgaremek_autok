@@ -10,14 +10,13 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.LoginController">
    <left>
       <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../MicrosoftTeams-image.png" />
+                  <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
                </image>
             </ImageView>
             <Label layoutX="20.0" layoutY="193.0" prefHeight="131.0" prefWidth="202.0" text="TeAutod.hu">
@@ -38,10 +37,11 @@
             <Button fx:id="loginButton" layoutX="34.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" text="Login" />
             <ImageView fitHeight="71.0" fitWidth="54.0" layoutX="120.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../letöltés.png" />
+                  <Image url="@../../../../../../Images/letöltés.png" />
                </image>
             </ImageView>
             <Label alignment="CENTER" layoutX="36.0" layoutY="213.0" prefHeight="17.0" prefWidth="222.0" text="Invalid Username or Password" textFill="#ff0606" />
+            <Button fx:id="ExitButton" layoutX="35.0" layoutY="288.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="225.0" text="Exit" />
          </children>
       </AnchorPane>
    </right>
