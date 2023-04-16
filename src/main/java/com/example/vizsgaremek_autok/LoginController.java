@@ -76,7 +76,7 @@ public void validateLogin() throws SQLException {
             if (queryResult.getInt(1) ==1) {
                 loginMessageLabel.setText("GG jo lett! faszagecixdd");
             } else {
-                loginMessageLabel.setText("Login failed. Please try Again.");
+                loginMessageLabel.setText("Username or Password doesn't match. Please try Again.");
             }
 
         }
