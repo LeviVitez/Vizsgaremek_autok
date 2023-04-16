@@ -14,7 +14,7 @@
    <left>
       <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="brandingImageView" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
                </image>
@@ -34,13 +34,13 @@
             <Label layoutX="29.0" layoutY="179.0" text="Password" />
             <TextField fx:id="usernameTextField" layoutX="99.0" layoutY="144.0" promptText="Username" />
             <PasswordField fx:id="enterpasswordField" layoutX="99.0" layoutY="175.0" promptText="Password" />
-            <Button fx:id="loginButton" layoutX="34.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" text="Login" />
-            <ImageView fitHeight="71.0" fitWidth="54.0" layoutX="120.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="loginButton" layoutX="34.0" layoutY="244.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="225.0" text="Login" />
+            <ImageView fx:id="lockImageView" fitHeight="71.0" fitWidth="54.0" layoutX="120.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Images/letöltés.png" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" layoutX="36.0" layoutY="213.0" prefHeight="17.0" prefWidth="222.0" text="Invalid Username or Password" textFill="#ff0606" />
+            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="36.0" layoutY="213.0" prefHeight="17.0" prefWidth="222.0" textFill="#ff0606" />
             <Button fx:id="ExitButton" layoutX="35.0" layoutY="288.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="225.0" text="Exit" />
          </children>
       </AnchorPane>
