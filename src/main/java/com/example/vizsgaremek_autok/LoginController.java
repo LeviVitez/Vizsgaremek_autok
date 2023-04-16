@@ -14,6 +14,7 @@ import javafx.event.ActionEvent;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
@@ -45,7 +46,7 @@ public class LoginController implements Initializable {
     }
 
 
-    public void loginButtonOnAction(ActionEvent event){
+    public void loginButtonOnAction(ActionEvent event) throws SQLException {
         if (usernameTextField.getText().isBlank() == false && enterpasswordField.getText().isBlank() == false){
             validateLogin();
         }else {
@@ -60,7 +61,7 @@ public void ExitButtonOnAction(ActionEvent event){
     stage.close();
 }
 
-public void validateLogin(){
+public void validateLogin() throws SQLException {
     DatabaseConnection connectNow= new DatabaseConnection();
     Connection connectDB = connectNow.getConnection();
 
