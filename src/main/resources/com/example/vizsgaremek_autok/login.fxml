@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.vizsgaremek_autok.LoginController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../MicrosoftTeams-image.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="20.0" layoutY="193.0" prefHeight="131.0" prefWidth="202.0" text="TeAutod.hu">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="29.0" layoutY="148.0" text="Username" />
+            <Label layoutX="29.0" layoutY="179.0" text="Password" />
+            <TextField fx:id="usernameTextField" layoutX="99.0" layoutY="144.0" promptText="Username" />
+            <PasswordField fx:id="enterpasswordField" layoutX="99.0" layoutY="175.0" promptText="Password" />
+            <Button fx:id="loginButton" layoutX="34.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="225.0" text="Login" />
+            <ImageView fitHeight="71.0" fitWidth="54.0" layoutX="120.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../letöltés.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="36.0" layoutY="213.0" prefHeight="17.0" prefWidth="222.0" text="Invalid Username or Password" textFill="#ff0606" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
