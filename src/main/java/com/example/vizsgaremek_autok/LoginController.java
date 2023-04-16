@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
 import java.io.File;
+import java.sql.Connection;
 import java.util.ResourceBundle;
 
 import java.net.URL;
@@ -58,7 +59,10 @@ public void ExitButtonOnAction(ActionEvent event){
 }
 
 public void validateLogin(){
+    DatabaseConnection connectNow=new DatabaseConnection();
+    Connection connectDB = connectNow.getConnection();
 
+    String verifyLogin=""
 }
 
 
