@@ -65,7 +65,7 @@ public void validateLogin() throws SQLException {
     DatabaseConnection connectNow= new DatabaseConnection();
     Connection connectDB = connectNow.getConnection();
 
-    String verifyLogin="SELECT * FROM user_data WHERE username = '"+ usernameTextField.getText() + "' AND password = '" + enterpasswordField.getText() + "'";
+    String verifyLogin="SELECT count(1) FROM user_data WHERE username = '"+ usernameTextField.getText() + "' AND password = '" + enterpasswordField.getText() + "'";
 
     try {
 
