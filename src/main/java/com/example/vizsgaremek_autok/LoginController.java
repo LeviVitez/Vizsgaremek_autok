@@ -29,8 +29,6 @@ public class LoginController implements Initializable {
     @FXML
     private ImageView brandingImageView;
     @FXML
-    private ImageView lockImageView;
-    @FXML
     private TextField usernameTextField;
     @FXML
     private PasswordField enterpasswordField;
@@ -41,9 +39,6 @@ public class LoginController implements Initializable {
         Image brandingImage = new Image(brandingFile.toURI().toString());
         brandingImageView.setImage(brandingImage);
 
-        File lockFile = new File("Images/letöltés.png");
-        Image lockImage = new Image(lockFile.toURI().toString());
-        lockImageView.setImage(lockImage);
     }
 
     public void loginButtonOnAction(ActionEvent event) throws SQLException {
