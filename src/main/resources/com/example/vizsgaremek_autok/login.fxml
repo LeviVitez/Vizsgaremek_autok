@@ -40,7 +40,7 @@
                   <Image url="@../../../../../../Images/letöltés.png" />
                </image>
             </ImageView>
-            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="36.0" layoutY="213.0" prefHeight="17.0" prefWidth="222.0" textFill="#ff0606" />
+            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutY="213.0" prefHeight="17.0" prefWidth="293.0" textFill="#ff0606" />
             <Button fx:id="ExitButton" layoutX="35.0" layoutY="288.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="225.0" text="Exit" />
          </children>
       </AnchorPane>

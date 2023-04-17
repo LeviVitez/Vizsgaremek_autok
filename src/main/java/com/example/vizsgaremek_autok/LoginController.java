@@ -1,7 +1,9 @@
 package com.example.vizsgaremek_autok;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -75,6 +77,12 @@ public void validateLogin() throws SQLException {
         while (queryResult.next()){
             if (queryResult.getInt(1) ==1) {
                 loginMessageLabel.setText("Succesful Login!");
+                FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("LoggedIn.fxml"));
+                Scene scene = new Scene(fxmlLoader.load(), 520, 400);
+                Stage stage = new Stage();
+                stage.setTitle("Logged In");
+                stage.setScene(scene);
+                stage.show();
             } else {
                 loginMessageLabel.setText("Username or Password doesn't match. Please try Again.");
             }
