@@ -14,34 +14,29 @@
    <left>
       <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="brandingImageView" fitHeight="150.0" fitWidth="200.0" layoutX="28.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="20.0" layoutY="193.0" prefHeight="131.0" prefWidth="202.0" text="TeAutod.hu">
-               <font>
-                  <Font size="35.0" />
-               </font>
-            </Label>
+            <Label layoutX="148.0" layoutY="287.0" text="Password" />
+            <Label layoutX="149.0" layoutY="245.0" text="Username" />
          </children>
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="400.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="290.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="29.0" layoutY="148.0" text="Username" />
-            <Label layoutX="29.0" layoutY="179.0" text="Password" />
-            <TextField fx:id="usernameTextField" layoutX="99.0" layoutY="144.0" prefHeight="25.0" prefWidth="160.0" promptText="Username" />
-            <PasswordField fx:id="enterpasswordField" layoutX="99.0" layoutY="175.0" prefHeight="25.0" prefWidth="160.0" promptText="Password" />
-            <Button fx:id="loginButton" layoutX="34.0" layoutY="244.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="225.0" text="Login" />
-            <ImageView fx:id="lockImageView" fitHeight="71.0" fitWidth="54.0" layoutX="120.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+            <TextField fx:id="usernameTextField" layoutX="-20.0" layoutY="242.0" prefHeight="25.0" prefWidth="160.0" promptText="Username" />
+            <PasswordField fx:id="enterpasswordField" layoutX="-20.0" layoutY="284.0" prefHeight="25.0" prefWidth="160.0" promptText="Password" />
+            <Button fx:id="loginButton" layoutX="-84.0" layoutY="324.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="225.0" text="Login" />
+            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="-121.0" layoutY="210.0" prefHeight="17.0" prefWidth="295.0" textFill="#ff0606" />
+            <Button fx:id="ExitButton" layoutX="-84.0" layoutY="361.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="225.0" text="Exit" />
+            <ImageView fx:id="brandingImageView" fitHeight="150.0" fitWidth="200.0" layoutX="-72.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Images/letöltés.png" />
+                  <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
                </image>
             </ImageView>
-            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutY="213.0" prefHeight="17.0" prefWidth="293.0" textFill="#ff0606" />
-            <Button fx:id="ExitButton" layoutX="35.0" layoutY="288.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="225.0" text="Exit" />
+            <Label alignment="CENTER" layoutX="-56.0" layoutY="131.0" prefHeight="87.0" prefWidth="181.0" text="TeAutod.hu">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </right>
