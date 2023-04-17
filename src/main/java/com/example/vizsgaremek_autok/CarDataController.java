@@ -12,10 +12,12 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.sql.Connection;
+import java.sql.Statement;
 
 public class CarDataController implements Initializable {
     @FXML
-    private TextField carNameLabel;
+    private TextField CarNameLabel;
     @FXML
     private TextField CarBrandLabel;
     @FXML
@@ -39,6 +41,8 @@ public class CarDataController implements Initializable {
     @FXML
     private TextField LicencePlateLabel;
     @FXML
+    private TextField LicencePlateLabelConfirm;
+    @FXML
     private Button UploadBut;
     @FXML
     private Button ExitBut;
@@ -53,10 +57,21 @@ public class CarDataController implements Initializable {
 
     }
 
-
+    public void RegisterButtonOnAction (ActionEvent event){
+        UploadBut.setText("Autó feltőltáse sikeres!");
+    }
 
     public void ExitButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) ExitBut.getScene().getWindow();
         stage.close();
     }
+
+    public void registerCar(){
+        if(){
+
+        }else {
+
+        }
+    }
+
 }
