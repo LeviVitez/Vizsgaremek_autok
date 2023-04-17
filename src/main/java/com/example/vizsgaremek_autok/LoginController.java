@@ -69,7 +69,7 @@ public class LoginController implements Initializable {
                 if (queryResult.getInt(1) == 1) {
                     loginMessageLabel.setText("Succesful Login!");
                     FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load(), 520, 757);
+                    Scene scene = new Scene(fxmlLoader.load(), 520, 802);
                     Stage stage = new Stage();
                     stage.setTitle("Logged In");
                     stage.setScene(scene);
