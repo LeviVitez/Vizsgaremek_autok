@@ -13,7 +13,7 @@
    <children>
       <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #F0FFFF;">
          <children>
-            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="brandingImageView" fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
                </image>
@@ -97,7 +97,7 @@
       </Label>
       <TextField fx:id="LicencePlateLabel" layoutX="92.0" layoutY="585.0" prefHeight="25.0" prefWidth="336.0" promptText="AAA-123" />
       <Button fx:id="UploadBut" layoutX="92.0" layoutY="629.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="336.0" text="Feltöltés" />
-      <Button fx:id="ExitBut" layoutX="92.0" layoutY="677.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="336.0" text="Bezárás" />
+      <Button fx:id="ExitBut" layoutX="92.0" layoutY="677.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="336.0" text="Bezárás" />
       <TextField fx:id="CarPowerLabel" layoutX="92.0" layoutY="321.0" prefHeight="25.0" prefWidth="336.0" />
    </children>
 </AnchorPane>
