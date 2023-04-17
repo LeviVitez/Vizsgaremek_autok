@@ -61,8 +61,14 @@ public class CarDataController implements Initializable {
     }
 
     public void RegisterButtonOnAction (ActionEvent event){
-        UploadBut.setText("Autó feltőltáse sikeres!");
-        registerCar();
+        if(LicencePlateLabel.getText().equals(LicencePlateLabelConfirm.getText())){
+            registerCar();
+            notMathingLicencePlatesLabel.setText("!");
+
+        }else {
+            notMathingLicencePlatesLabel.setText("A megadott rendszámok nem eggyeznek! ");
+        }
+
     }
 
     public void ExitButtonOnAction(ActionEvent event) {
@@ -72,11 +78,41 @@ public class CarDataController implements Initializable {
     }
 
     public void registerCar(){
-        if(LicencePlateLabel.getText().equals(LicencePlateLabelConfirm.getText())){
-            notMathingLicencePlatesLabel.setText("Megegyező mezők!");
-        }else {
-            notMathingLicencePlatesLabel.setText("A megadott rendszámok nem eggyeznek! ");
+        DatabaseConnection connectNow = new DatabaseConnection();
+        Connection connectDB = connectNow.getConnection();
+
+        String carname = CarNameLabel.getText();
+        String carbrand = CarBrandLabel.getText();
+        String carModel = ModelLabel.getText();
+        String carYear = ModelYearLabel.getText();
+        String fuel = FuelLabel.getText();
+        String carPower = CarPowerLabel.getText();
+        String GearType = GearTypeLabel.getText();
+        String carColor = ColorLabel.getText();
+        String carchassi = ChassiTypeLabel.getText();
+        String doors = DoorsLabel.getText();
+        String fuelEconomy = FuelEconomyLabel.getText();
+        String licencePlate = LicencePlateLabel.getText();
+
+        String insertFields = "INSERT INTO car_data(brand," +
+                " model, modelYear, fuelType, carPower," +
+                " gearType, doors, fuelEconomy, license_plate, " +
+                "givenName) VALUES ('";
+        String insertValuse = carname + "','" + carbrand + carModel + carYear + "','" + fuel + "','" +
+                carPower + "','" + GearType + "','" + carColor + "','" + carchassi + "','" +
+                doors + "','" + fuelEconomy + "','" + licencePlate + "')";
+
+        String insertToRegister = insertFields + insertValuse;
+
+        try {
+            Statement statement = connectDB.createStatement();
+            statement.executeUpdate(insertToRegister);
+            UploadBut.setText("Autó feltőltáse sikeres!");
+        }catch (Exception e){
+            e.PrintStackTrace();
+            e.getCause();
         }
+
     }
 
 }
