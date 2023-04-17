@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="734.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.CarDataController">
+   <children>
+      <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #F0FFFF;">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="110.0" layoutY="28.0" text="Autó feltöltése">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="92.0" layoutY="82.0" text="Auto neve">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="CarNameLabel" layoutX="92.0" layoutY="101.0" prefHeight="25.0" prefWidth="336.0" />
+      <Label layoutX="92.0" layoutY="126.0" text="Autó márkáj">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="CarBrandLabel" layoutX="92.0" layoutY="145.0" prefHeight="25.0" prefWidth="336.0" />
+      <Label layoutX="92.0" layoutY="170.0" text="Model">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ModelLabel" layoutX="92.0" layoutY="189.0" prefHeight="25.0" prefWidth="336.0" />
+      <Label layoutX="92.0" layoutY="214.0" text="Évjárat">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ModelYearLabel" layoutX="92.0" layoutY="233.0" prefHeight="25.0" prefWidth="336.0" />
+      <Label layoutX="92.0" layoutY="258.0" text="Üzemanyag">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="FuelLabel" layoutX="92.0" layoutY="277.0" prefHeight="25.0" prefWidth="336.0" />
+      <Label layoutX="92.0" layoutY="302.0" text="Lóerő">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="92.0" layoutY="346.0" text="Váltó típósa">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="GearTypeLabel" layoutX="92.0" layoutY="365.0" prefHeight="25.0" prefWidth="336.0" />
+      <Label layoutX="92.0" layoutY="390.0" text="Szín">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ColorLabel" layoutX="92.0" layoutY="409.0" prefHeight="25.0" prefWidth="336.0" />
+      <Label layoutX="92.0" layoutY="434.0" text="Kaszni">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ChassiTypeLabel" layoutX="92.0" layoutY="453.0" prefHeight="25.0" prefWidth="336.0" promptText="Kombi" />
+      <Label layoutX="92.0" layoutY="478.0" text="Ajtók száma">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="DoorsLabel" layoutX="92.0" layoutY="497.0" prefHeight="25.0" prefWidth="336.0" />
+      <Label layoutX="92.0" layoutY="522.0" text="Fogyasztás">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="FuelEconomyLabel" layoutX="92.0" layoutY="541.0" prefHeight="25.0" prefWidth="336.0" promptText="10 lieter / 100 km" />
+      <Label layoutX="92.0" layoutY="566.0" text="Rendszám">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="LicencePlateLabel" layoutX="92.0" layoutY="585.0" prefHeight="25.0" prefWidth="336.0" promptText="AAA-123" />
+      <Button fx:id="UploadBut" layoutX="92.0" layoutY="629.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="336.0" text="Feltöltés" />
+      <Button fx:id="ExitBut" layoutX="92.0" layoutY="677.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="336.0" text="Bezárás" />
+      <TextField fx:id="CarPowerLabel" layoutX="92.0" layoutY="321.0" prefHeight="25.0" prefWidth="336.0" />
+   </children>
+</AnchorPane>
