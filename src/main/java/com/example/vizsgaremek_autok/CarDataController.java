@@ -1,5 +1,6 @@
 package com.example.vizsgaremek_autok;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -67,6 +68,7 @@ public class CarDataController implements Initializable {
     public void ExitButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) ExitBut.getScene().getWindow();
         stage.close();
+        Platform.exit();
     }
 
     public void registerCar(){
