@@ -1,10 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="543.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.CarDataList">
+<AnchorPane prefHeight="600.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.CarDataList">
    <children>
-      <AnchorPane layoutY="-2.0" prefHeight="95.0" prefWidth="604.0" style="-fx-background-color: #F0FFFF;" />
+      <AnchorPane layoutY="-2.0" prefHeight="95.0" prefWidth="604.0" style="-fx-background-color: #F0FFFF;">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="100.0" layoutY="40.0" text="Az autód adatai">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="106.0" layoutY="103.0" text="Márka" />
+      <Label layoutX="106.0" layoutY="145.0" text="Modell" />
+      <Label layoutX="106.0" layoutY="187.0" text="Évjárat" />
+      <Label layoutX="106.0" layoutY="229.0" text="Üzemanyag" />
+      <Label layoutX="106.0" layoutY="272.0" text="Lóerő" />
+      <Label layoutX="106.0" layoutY="314.0" text="Váltó típúsa" />
+      <Label layoutX="106.0" layoutY="356.0" text="Szín" />
+      <Label layoutX="106.0" layoutY="398.0" text="Kaszni típúsa" />
+      <Label layoutX="106.0" layoutY="440.0" text="Ajtók száma" />
+      <Label layoutX="106.0" layoutY="482.0" text="Fogyasztás" />
+      <Label layoutX="106.0" layoutY="524.0" text="Rendszám" />
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/carList.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/carList.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/carList.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/carList.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/carList.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/carList.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/carList.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/carList.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/carList.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/carList.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/carList.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="brand" layoutX="111.0" layoutY="127.0" text="Adat1" />
+      <Label fx:id="modell" layoutX="114.0" layoutY="167.0" text="Adat2" />
+      <Label fx:id="modelYear" layoutX="114.0" layoutY="209.0" text="Adat3" />
+      <Label fx:id="fuelType" layoutX="114.0" layoutY="251.0" text="Adat4" />
+      <Label fx:id="carPower" layoutX="114.0" layoutY="294.0" text="Adat5" />
+      <Label fx:id="gearType" layoutX="114.0" layoutY="336.0" text="Adat6" />
+      <Label fx:id="color" layoutX="114.0" layoutY="378.0" text="Adat7" />
+      <Label fx:id="chassisType" layoutX="116.0" layoutY="420.0" text="Adat8" />
+      <Label fx:id="doors" layoutX="114.0" layoutY="462.0" text="Adat9" />
+      <Label fx:id="fuelEchonomy" layoutX="114.0" layoutY="504.0" text="Adat10" />
+      <Label fx:id="licence_plate" layoutX="114.0" layoutY="546.0" text="Adat11" />
+      <ImageView fitHeight="42.0" fitWidth="38.0" layoutX="339.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Images/plus.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="389.0" layoutY="506.0" mnemonicParsing="false" text="Esemény hozzáadása">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="274.0" layoutY="109.0" prefHeight="384.0" prefWidth="322.0" style="-fx-background-color: #D3D3D3;">
+         <children>
+            <Label layoutX="86.0" layoutY="14.0" prefHeight="20.0" prefWidth="135.0" text="Kózelgő események!">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="42.0" fitWidth="34.0" layoutX="255.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/calendar.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="53.0" text="anyád" />
+            <Label layoutX="14.0" layoutY="70.0" text="egy" />
+            <Label layoutX="14.0" layoutY="87.0" text="mocskos" />
+            <Label layoutX="14.0" layoutY="104.0" text="román" />
+            <Label layoutX="14.0" layoutY="121.0" text="cigány" />
+            <Label layoutX="14.0" layoutY="138.0" text="kurva" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
