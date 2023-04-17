@@ -48,6 +48,8 @@ public class CarDataController implements Initializable {
     private Button ExitBut;
     @FXML
     private ImageView brandingImageView;
+    @FXML
+    private TextField notMathingLicencePlatesLabel;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -59,6 +61,7 @@ public class CarDataController implements Initializable {
 
     public void RegisterButtonOnAction (ActionEvent event){
         UploadBut.setText("Autó feltőltáse sikeres!");
+        registerCar();
     }
 
     public void ExitButtonOnAction(ActionEvent event) {
@@ -67,10 +70,10 @@ public class CarDataController implements Initializable {
     }
 
     public void registerCar(){
-        if(){
-
+        if(LicencePlateLabel.getText().equals(LicencePlateLabelConfirm.getText())){
+            notMathingLicencePlatesLabel.setText("Megegyező mezők!");
         }else {
-
+            notMathingLicencePlatesLabel.setText("A megadott rendszámok nem eggyeznek! ");
         }
     }
 
