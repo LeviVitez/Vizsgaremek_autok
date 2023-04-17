@@ -12,6 +12,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
+import javafx.stage.StageStyle;
 
 import java.io.File;
 import java.sql.Connection;
@@ -32,6 +33,8 @@ public class LoginController implements Initializable {
     private TextField usernameTextField;
     @FXML
     private PasswordField enterpasswordField;
+    @FXML
+    private Button loginButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -68,12 +71,15 @@ public class LoginController implements Initializable {
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
                     loginMessageLabel.setText("Succesful Login!");
+                    Stage stage = (Stage) loginButton.getScene().getWindow();
+                    stage.close();
                     FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
                     Scene scene = new Scene(fxmlLoader.load(), 520, 802);
-                    Stage stage = new Stage();
-                    stage.setTitle("Logged In");
-                    stage.setScene(scene);
-                    stage.show();
+                    Stage stage2 = new Stage();
+                    stage2.initStyle(StageStyle.UNDECORATED);
+                    stage2.setTitle("Logged In");
+                    stage2.setScene(scene);
+                    stage2.show();
                 } else {
                     loginMessageLabel.setText("Username or Password doesn't match. Please try Again.");
                 }
