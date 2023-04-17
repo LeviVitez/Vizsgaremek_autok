@@ -61,12 +61,7 @@ public class CarDataController implements Initializable {
     }
 
     public void RegisterButtonOnAction (ActionEvent event){
-        //if(LicencePlateLabel.getText().equals(LicencePlateLabelConfirm.getText())){
-           // registerCar();
-           // notMathingLicencePlatesLabel.setText("!");
-
-        //}else {
-           // notMathingLicencePlatesLabel.setText("A megadott rendszámok nem eggyeznek! ");
+            registerCar();
         }
 
 

@@ -110,10 +110,5 @@
          </font>
       </Label>
       <TextField fx:id="LicencePlateLabelConfirm" layoutX="92.0" layoutY="656.0" prefHeight="25.0" prefWidth="336.0" promptText="AAA-123" />
-      <Label fx:id="notMathingLicencePlatesLabel" alignment="CENTER" layoutX="224.0" layoutY="637.0" prefHeight="19.0" prefWidth="260.0" text="A megadott rendszámok nem eggyeznek!" textAlignment="CENTER" textFill="#ff0808">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>
