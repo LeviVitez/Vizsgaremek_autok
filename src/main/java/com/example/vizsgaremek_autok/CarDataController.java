@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -12,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.net.URL;
+import java.sql.PreparedStatement;
 import java.util.ResourceBundle;
 import java.sql.Connection;
 import java.sql.Statement;
@@ -49,6 +51,8 @@ public class CarDataController implements Initializable {
     private Button ExitBut;
     @FXML
     private ImageView brandingImageView;
+    @FXML
+    private Label successfulUploadLabel;
     //@FXML
     //private TextField notMathingLicencePlatesLabel;
 
@@ -88,10 +92,7 @@ public class CarDataController implements Initializable {
         String fuelEconomy = FuelEconomyLabel.getText();
         String licencePlate = LicencePlateLabel.getText();
 
-        String insertFields = "INSERT INTO car_data(brand," +
-                " model, modelYear, fuelType, carPower," +
-                " gearType, doors, fuelEconomy, license_plate, " +
-                "givenName) VALUES ('";
+        String insertFields = "INSERT INTO car_data(brand,model,modelYear,fuelType, carPower, gearType, color, chassisType, doors, fuelEconomy, license_plate, givenName) VALUES ('";
         String insertValuse = carname + "','" + carbrand + carModel + carYear + "','" + fuel + "','" +
                 carPower + "','" + GearType + "','" + carColor + "','" + carchassi + "','" +
                 doors + "','" + fuelEconomy + "','" + licencePlate + "')";
@@ -101,7 +102,7 @@ public class CarDataController implements Initializable {
         try {
             Statement statement = connectDB.createStatement();
             statement.executeUpdate(insertToRegister);
-            UploadBut.setText("Autó feltőltáse sikeres!");
+            successfulUploadLabel.setText("Autó feltőltáse sikeres!");
         }catch (Exception e){
             e.printStackTrace();
             e.getCause();
