@@ -68,8 +68,8 @@ public class LoginController implements Initializable {
             while (queryResult.next()) {
                 if (queryResult.getInt(1) == 1) {
                     loginMessageLabel.setText("Succesful Login!");
-                    FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("LoggedIn.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load(), 520, 400);
+                    FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
+                    Scene scene = new Scene(fxmlLoader.load(), 520, 734);
                     Stage stage = new Stage();
                     stage.setTitle("Logged In");
                     stage.setScene(scene);
