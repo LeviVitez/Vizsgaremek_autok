@@ -9,15 +9,15 @@ private String fuelType;
 private Number carPower;
 private String gearType;
 private String color;
-private String chassiType;
+private String chassisType;
 private Number doors;
 private String fuelEconomy;
-private String licence_plate;
+private String license_plate;
 
 
 
     public CarDataDTO(String givenName,String brand, String model,Number modelYear,String fuelType,Number carPower,String gearType,
-                      String color, String chassiType, Number doors, String fuelEconomy, String licence_plate){
+                      String color, String chassisType, Number doors, String fuelEconomy, String license_plate){
         this.givenName=givenName;
         this.brand=brand;
         this.model=model;
@@ -26,10 +26,10 @@ private String licence_plate;
         this.carPower=carPower;
         this.gearType=gearType;
         this.color=color;
-        this.chassiType=chassiType;
+        this.chassisType=chassisType;
         this.doors=doors;
         this.fuelEconomy=fuelEconomy;
-        this.licence_plate=licence_plate;
+        this.license_plate=license_plate;
 
 
     }
@@ -48,14 +48,14 @@ private String licence_plate;
     public void setGearType(String gearType){this.gearType=gearType;}
     public String getColor(){return color;}
     public void setColor(String color){this.color=color;}
-    public String getChassiType(){return chassiType;}
-    public void setChassiType(String chassiType){this.chassiType=chassiType;}
+    public String getChassiType(){return chassisType;}
+    public void setChassiType(String chassiType){this.chassisType=chassiType;}
     public Number getDoors(){return doors;}
     public void setDoors(Number doors){this.doors=doors;}
     public String getFuelEconomy(){return fuelEconomy;}
     public void setFuelEconomy(String fuelEconomy){this.fuelEconomy=fuelEconomy;}
-    public String getLicence_plate(){return licence_plate;}
-    public void setLicence_plate(String licence_plate){this.licence_plate=licence_plate;}
+    public String getLicence_plate(){return license_plate;}
+    public void setLicence_plate(String licence_plate){this.license_plate=licence_plate;}
     public String getGivenName(){return givenName;}
     public void setGivenName(String givenName){this.givenName=givenName;}
 
