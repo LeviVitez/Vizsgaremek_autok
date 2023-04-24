@@ -13,12 +13,9 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.stage.StageStyle;
+import kong.unirest.Unirest;
 
 import java.io.File;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 import java.net.URL;
 
@@ -44,7 +41,7 @@ public class LoginController implements Initializable {
 
     }
 
-    public void loginButtonOnAction(ActionEvent event) throws SQLException {
+    public void loginButtonOnAction(ActionEvent event) {
         if (usernameTextField.getText().isBlank() == false && enterpasswordField.getText().isBlank() == false) {
             validateLogin();
         } else {
@@ -58,34 +55,26 @@ public class LoginController implements Initializable {
         stage.close();
     }
 
-    public void validateLogin() throws SQLException {
-        DatabaseConnection connectNow = new DatabaseConnection();
-        Connection connectDB = connectNow.getConnection();
-
-        String verifyLogin = "SELECT count(1) FROM user_data WHERE username = '" + usernameTextField.getText() + "' AND password = '" + enterpasswordField.getText() + "'";
-
+    public void validateLogin() {
         try {
-            Statement statement = connectDB.createStatement();
-            ResultSet queryResult = statement.executeQuery(verifyLogin);
-
-            while (queryResult.next()) {
-                if (queryResult.getInt(1) == 1) {
-                    loginMessageLabel.setText("Succesful Login!");
-                    Stage stage = (Stage) loginButton.getScene().getWindow();
-                    stage.close();
-                    FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load(), 520, 802);
-                    Stage stage2 = new Stage();
-                    stage2.initStyle(StageStyle.UNDECORATED);
-                    stage2.setTitle("Logged In");
-                    stage2.setScene(scene);
-                    stage2.show();
-                } else {
-                    loginMessageLabel.setText("Username or Password doesn't match. Please try Again.");
-                }
-
+            LoginDTO loginDTO = new LoginDTO(usernameTextField.getText(), enterpasswordField.getText());
+            int status = Unirest.post("http://localhost:3001/auth/login")
+                    .header("Content-Type", "application/json")
+                    .body(loginDTO).asJson().getStatus();
+            if (status == 201) {
+                loginMessageLabel.setText("Succesful Login!");
+                Stage stage = (Stage) loginButton.getScene().getWindow();
+                stage.close();
+                FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
+                Scene scene = new Scene(fxmlLoader.load(), 520, 802);
+                Stage stage2 = new Stage();
+                stage2.initStyle(StageStyle.UNDECORATED);
+                stage2.setTitle("Logged In");
+                stage2.setScene(scene);
+                stage2.show();
+            } else {
+                loginMessageLabel.setText("Username or Password doesn't match. Please try Again.");
             }
-
 
         } catch (Exception e) {
             e.printStackTrace();

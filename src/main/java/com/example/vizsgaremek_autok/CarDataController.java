@@ -13,10 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.net.URL;
-import java.sql.PreparedStatement;
 import java.util.ResourceBundle;
-import java.sql.Connection;
-import java.sql.Statement;
 
 public class CarDataController implements Initializable {
     @FXML
@@ -76,9 +73,6 @@ public class CarDataController implements Initializable {
     }
 
     public void registerCar(){
-        DatabaseConnection connectNow = new DatabaseConnection();
-        Connection connectDB = connectNow.getConnection();
-
         String carname = CarNameLabel.getText();
         String carbrand = CarBrandLabel.getText();
         String carModel = ModelLabel.getText();
@@ -92,16 +86,8 @@ public class CarDataController implements Initializable {
         String fuelEconomy = FuelEconomyLabel.getText();
         String licencePlate = LicencePlateLabel.getText();
 
-        String insertFields = "INSERT INTO car_data(brand,model,modelYear,fuelType, carPower, gearType, color, chassisType, doors, fuelEconomy, license_plate, givenName) VALUES ('";
-        String insertValuse = carname + "','" + carbrand + carModel + carYear + "','" + fuel + "','" +
-                carPower + "','" + GearType + "','" + carColor + "','" + carchassi + "','" +
-                doors + "','" + fuelEconomy + "','" + licencePlate + "')";
-
-        String insertToRegister = insertFields + insertValuse;
 
         try {
-            Statement statement = connectDB.createStatement();
-            statement.executeUpdate(insertToRegister);
             successfulUploadLabel.setText("Autó feltőltáse sikeres!");
         }catch (Exception e){
             e.printStackTrace();
