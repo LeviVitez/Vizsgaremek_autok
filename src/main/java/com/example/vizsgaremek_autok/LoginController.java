@@ -73,6 +73,7 @@ public class LoginController implements Initializable {
                     JSONObject responseBody = response.getBody().getObject();
                     userId = responseBody.getString("userId");
                     System.out.println(userId);
+
                     loginMessageLabel.setText("Succesful Login!");
                     FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
                     Scene scene = new Scene(fxmlLoader.load(), 520, 802);
@@ -93,7 +94,15 @@ public class LoginController implements Initializable {
     public String getUserId() {
         return userId;
     }
-    /*public void validateLogin() {
+
+
+
+    /*public class Constants {
+        public static String UserId=userid;
+    }
+
+
+    public void validateLogin() {
         try {
             LoginDTO loginDTO = new LoginDTO(usernameTextField.getText(), enterpasswordField.getText());
             int status = Unirest.post("http://localhost:3001/auth/login")
