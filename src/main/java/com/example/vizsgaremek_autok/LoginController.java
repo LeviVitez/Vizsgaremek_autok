@@ -13,7 +13,10 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.stage.StageStyle;
+import kong.unirest.HttpResponse;
+import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
+import kong.unirest.json.JSONObject;
 
 import java.io.File;
 import java.util.ResourceBundle;
@@ -32,6 +35,9 @@ public class LoginController implements Initializable {
     private PasswordField enterpasswordField;
     @FXML
     private Button loginButton;
+    public String userId;
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -55,16 +61,52 @@ public class LoginController implements Initializable {
         stage.close();
     }
 
-    public void validateLogin() {
+
+        public void validateLogin() {
+            try {
+                LoginDTO loginDTO = new LoginDTO(usernameTextField.getText(), enterpasswordField.getText());
+                HttpResponse<JsonNode> response = Unirest.post("http://localhost:3001/auth/login")
+                        .header("Content-Type", "application/json")
+                        .body(loginDTO).asJson();
+                int status = response.getStatus();
+                if (status == 201) {
+                    JSONObject responseBody = response.getBody().getObject();
+                    userId = responseBody.getString("userId");
+                    System.out.println(userId);
+                    loginMessageLabel.setText("Succesful Login!");
+                    FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
+                    Scene scene = new Scene(fxmlLoader.load(), 520, 802);
+                    Stage stage2 = new Stage();
+                    stage2.initStyle(StageStyle.UNDECORATED);
+                    stage2.setTitle("Logged In");
+                    stage2.setScene(scene);
+                    stage2.show();
+                } else {
+                    loginMessageLabel.setText("Username or Password doesn't match. Please try Again.");
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                e.getCause();
+            }
+        }
+    public String getUserId() {
+        return userId;
+    }
+    /*public void validateLogin() {
         try {
             LoginDTO loginDTO = new LoginDTO(usernameTextField.getText(), enterpasswordField.getText());
             int status = Unirest.post("http://localhost:3001/auth/login")
                     .header("Content-Type", "application/json")
                     .body(loginDTO).asJson().getStatus();
             if (status == 201) {
+
                 loginMessageLabel.setText("Succesful Login!");
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 stage.close();
+
+
+
                 FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 520, 802);
                 Stage stage2 = new Stage();
@@ -80,5 +122,5 @@ public class LoginController implements Initializable {
             e.printStackTrace();
             e.getCause();
         }
-    }
+    }*/
 }
