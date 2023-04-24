@@ -30,7 +30,7 @@
          </font>
       </Label>
       <TextField fx:id="CarNameLabel" layoutX="92.0" layoutY="128.0" prefHeight="25.0" prefWidth="336.0" />
-      <Label layoutX="92.0" layoutY="153.0" text="Autó márkáj">
+      <Label layoutX="92.0" layoutY="153.0" text="Autó márkája">
          <font>
             <Font size="13.0" />
          </font>
@@ -95,7 +95,7 @@
          </font>
       </Label>
       <TextField fx:id="LicencePlateLabel" layoutX="92.0" layoutY="612.0" prefHeight="25.0" prefWidth="336.0" promptText="AAA-123" />
-      <Button fx:id="UploadBut" layoutX="92.0" layoutY="709.0" mnemonicParsing="false" onAction="#RegisterButtonOnAction" prefHeight="25.0" prefWidth="336.0" text="Feltöltés" />
+      <Button fx:id="UploadBut" layoutX="92.0" layoutY="709.0" mnemonicParsing="false" onAction="#UploadButtonOnAction" prefHeight="25.0" prefWidth="336.0" text="Feltöltés" />
       <Button fx:id="ExitBut" layoutX="92.0" layoutY="750.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="336.0" text="Bezárás" />
       <TextField fx:id="CarPowerLabel" layoutX="92.0" layoutY="348.0" prefHeight="25.0" prefWidth="336.0" />
       <Label fx:id="successfulUploadLabel" alignment="CENTER" layoutX="-2.0" layoutY="82.0" prefHeight="19.0" prefWidth="520.0" textAlignment="CENTER" textFill="#0634ff">
@@ -103,11 +103,5 @@
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="92.0" layoutY="637.0" text="Rendszám mégegyszer">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="LicencePlateLabelConfirm" layoutX="92.0" layoutY="656.0" prefHeight="25.0" prefWidth="336.0" promptText="AAA-123" />
    </children>
 </AnchorPane>

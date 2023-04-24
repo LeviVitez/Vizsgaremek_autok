@@ -1,7 +1,7 @@
 package com.example.vizsgaremek_autok;
 
 public class CarDataDTO {
-private Number carId;
+private String givenName;
 private String brand;
 private String model;
 private Number modelYear;
@@ -13,12 +13,12 @@ private String chassiType;
 private Number doors;
 private String fuelEconomy;
 private String licence_plate;
-private String givenName;
 
 
-    public CarDataDTO(Number carId, String brand, String model,Number modelYear,String fuelType,Number carPower,String gearType,
-                      String color, String chassiType, Number doors, String fuelEconomy, String licence_plate,String givenName){
-        this.carId=carId;
+
+    public CarDataDTO(String givenName,String brand, String model,Number modelYear,String fuelType,Number carPower,String gearType,
+                      String color, String chassiType, Number doors, String fuelEconomy, String licence_plate){
+        this.givenName=givenName;
         this.brand=brand;
         this.model=model;
         this.modelYear=modelYear;
@@ -30,12 +30,10 @@ private String givenName;
         this.doors=doors;
         this.fuelEconomy=fuelEconomy;
         this.licence_plate=licence_plate;
-        this.givenName=givenName;
+
 
     }
 
-    public Number getCarId(){return carId;}
-    public void setCarId(Number carId){this.carId=carId;}
     public String getBrand(){return brand;}
     public void setBrand(){this.brand = brand;}
     public String getModel(){return model;}

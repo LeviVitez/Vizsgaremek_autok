@@ -10,7 +10,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import kong.unirest.Unirest;
 
+import java.io.Console;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -41,17 +43,11 @@ public class CarDataController implements Initializable {
     @FXML
     private TextField LicencePlateLabel;
     @FXML
-    private TextField LicencePlateLabelConfirm;
-    @FXML
-    private Button UploadBut;
-    @FXML
     private Button ExitBut;
     @FXML
     private ImageView brandingImageView;
     @FXML
     private Label successfulUploadLabel;
-    //@FXML
-    //private TextField notMathingLicencePlatesLabel;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -61,39 +57,25 @@ public class CarDataController implements Initializable {
 
     }
 
-    public void RegisterButtonOnAction (ActionEvent event){
-            registerCar();
-        }
+    public void UploadButtonOnAction(ActionEvent event) {
+        int modelYear = Integer.parseInt(ModelYearLabel.getText());
+        int carPower = Integer.parseInt(CarPowerLabel.getText());
+        int doors = Integer.parseInt(DoorsLabel.getText());
+
+        CarDataDTO carDataDTO = new CarDataDTO(CarNameLabel.getText(), CarBrandLabel.getText(), ModelLabel.getText(),
+                modelYear, FuelLabel.getText(), carPower, GearTypeLabel.getText(),
+                ColorLabel.getText(),ChassiTypeLabel.getText(), doors,FuelEconomyLabel.getText(), LicencePlateLabel.getText());
+        int status = Unirest.post("http://localhost:3001/car/9")
+                .header("Content-Type", "application/json")
+                .body(carDataDTO).asJson().getStatus();
+        successfulUploadLabel.setText("Autó feltőltése sikeres!");
+    }
 
 
     public void ExitButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) ExitBut.getScene().getWindow();
         stage.close();
         Platform.exit();
-    }
-
-    public void registerCar(){
-        String carname = CarNameLabel.getText();
-        String carbrand = CarBrandLabel.getText();
-        String carModel = ModelLabel.getText();
-        String carYear = ModelYearLabel.getText();
-        String fuel = FuelLabel.getText();
-        String carPower = CarPowerLabel.getText();
-        String GearType = GearTypeLabel.getText();
-        String carColor = ColorLabel.getText();
-        String carchassi = ChassiTypeLabel.getText();
-        String doors = DoorsLabel.getText();
-        String fuelEconomy = FuelEconomyLabel.getText();
-        String licencePlate = LicencePlateLabel.getText();
-
-
-        try {
-            successfulUploadLabel.setText("Autó feltőltáse sikeres!");
-        }catch (Exception e){
-            e.printStackTrace();
-            e.getCause();
-        }
-
     }
 
 }
