@@ -36,6 +36,9 @@ public class LoginController implements Initializable {
     @FXML
     private Button loginButton;
     public String userId;
+    public String getUserId(){
+        return userId;
+    }
 
 
 
@@ -91,13 +94,28 @@ public class LoginController implements Initializable {
                 e.getCause();
             }
         }
-    public String getUserId() {
+
+
+    public class globaluserid {
+
+        public String globalVariable;
+
+        public void setGlobalVariable() {
+            this.globalVariable = userId;
+        }
+
+        public String getGlobalVariable() {
+            return this.globalVariable;
+        }
+    }
+
+   /* public String getUserId() {
         return userId;
     }
 
 
 
-    /*public class Constants {
+    public class Constants {
         public static String UserId=userid;
     }
 

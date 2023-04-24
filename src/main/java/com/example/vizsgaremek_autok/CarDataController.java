@@ -71,9 +71,7 @@ public class CarDataController implements Initializable {
         CarDataDTO carDataDTO = new CarDataDTO(CarNameLabel.getText(), CarBrandLabel.getText(), ModelLabel.getText(),
                 modelYear, FuelLabel.getText(), carPower, GearTypeLabel.getText(),
                 ColorLabel.getText(),ChassiTypeLabel.getText(), doors,FuelEconomyLabel.getText(), LicencePlateLabel.getText());
-        LoginController loginController = new LoginController();
-        String userId = loginController.getUserId();
-        int status = Unirest.post("http://localhost:3001/car/"+ LoginController.GlobalConstants.UserId)
+        int status = Unirest.post("http://localhost:3001/car/")
                 .header("Content-Type", "application/json")
                 .body(carDataDTO).asJson().getStatus();
         successfulUploadLabel.setText("Autó feltőltése sikeres!");

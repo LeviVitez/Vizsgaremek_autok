@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="600.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.CarDataListController">
    <children>
       <AnchorPane layoutY="-2.0" prefHeight="95.0" prefWidth="604.0" style="-fx-background-color: #F0FFFF;">
@@ -123,12 +122,12 @@
                   <Image url="@../../../../../../Images/calendar.png" />
                </image>
             </ImageView>
-            <Label layoutX="14.0" layoutY="53.0" text="anyád" />
+            <Label layoutX="14.0" layoutY="53.0" text="a" />
             <Label layoutX="14.0" layoutY="70.0" text="egy" />
-            <Label layoutX="14.0" layoutY="87.0" text="mocskos" />
-            <Label layoutX="14.0" layoutY="104.0" text="román" />
-            <Label layoutX="14.0" layoutY="121.0" text="cigány" />
-            <Label layoutX="14.0" layoutY="138.0" text="kurva" />
+            <Label layoutX="14.0" layoutY="87.0" text="cica" />
+            <Label layoutX="14.0" layoutY="104.0" text="kutyus" />
+            <Label layoutX="14.0" layoutY="121.0" text="aaa" />
+            <Label layoutX="14.0" layoutY="138.0" text="test" />
          </children>
       </AnchorPane>
    </children>
