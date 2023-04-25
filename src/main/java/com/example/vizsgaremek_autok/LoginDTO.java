@@ -1,6 +1,7 @@
 package com.example.vizsgaremek_autok;
 
 public class LoginDTO {
+    private String id;
     private String username;
     private String password;
 
