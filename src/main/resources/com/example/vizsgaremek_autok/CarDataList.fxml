@@ -11,7 +11,7 @@
    <children>
       <AnchorPane layoutY="-2.0" prefHeight="95.0" prefWidth="604.0" style="-fx-background-color: #F0FFFF;">
          <children>
-            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="brandingImageView" fitHeight="42.0" fitWidth="69.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
                </image>
