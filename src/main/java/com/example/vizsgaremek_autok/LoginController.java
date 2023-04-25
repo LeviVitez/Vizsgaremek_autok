@@ -82,6 +82,9 @@ public class LoginController implements Initializable {
                 loginMessageLabel.setText("Succesful Login!");
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 stage.close();
+
+
+
                 FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 520, 802);
                 Stage stage2 = new Stage();

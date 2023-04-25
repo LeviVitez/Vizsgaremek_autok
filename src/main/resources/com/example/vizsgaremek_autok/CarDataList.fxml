@@ -23,7 +23,10 @@
             </Label>
          </children>
       </AnchorPane>
-      <Label layoutX="106.0" layoutY="103.0" text="Márka" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="97.0" text="Márka" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
       <Label layoutX="106.0" layoutY="145.0" text="Modell" />
       <Label layoutX="106.0" layoutY="187.0" text="Évjárat" />
       <Label layoutX="106.0" layoutY="229.0" text="Üzemanyag" />
