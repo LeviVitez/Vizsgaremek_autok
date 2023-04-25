@@ -82,9 +82,9 @@ public class CarDataController implements Initializable {
         Scene scene = new Scene(fxmlLoader.load(), 800, 1200);
         Stage stage3 = new Stage();
         stage3.setTitle("Logged In");
+        ((CarDataListController) fxmlLoader.getController()).setLoginModellForCarDataList(loginModell);
         stage3.setScene(scene);
         stage3.show();
-
     }
 
 
