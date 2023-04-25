@@ -100,7 +100,7 @@
       <Label fx:id="doors" layoutX="114.0" layoutY="462.0" text="Adat9" />
       <Label fx:id="fuelEchonomy" layoutX="114.0" layoutY="504.0" text="Adat10" />
       <Label fx:id="licence_plate" layoutX="114.0" layoutY="546.0" text="Adat11" />
-      <ImageView fitHeight="42.0" fitWidth="38.0" layoutX="339.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="plusImageView" fitHeight="42.0" fitWidth="38.0" layoutX="339.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/plus.png" />
          </image>
@@ -117,7 +117,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <ImageView fitHeight="42.0" fitWidth="34.0" layoutX="255.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="calendarImageView" fitHeight="42.0" fitWidth="34.0" layoutX="255.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Images/calendar.png" />
                </image>

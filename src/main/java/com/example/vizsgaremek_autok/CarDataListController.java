@@ -20,6 +20,10 @@ public class CarDataListController implements Initializable {
     @FXML
     private ImageView brandingImageView;
     @FXML
+    private ImageView calendarImageView;
+    @FXML
+    private ImageView plusImageView;
+    @FXML
     private Label brand;
     @FXML
     private Label modell;
@@ -98,8 +102,16 @@ public class CarDataListController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         File brandingFile = new File("Images/MicrosoftTeams-image.png");
+        File plusFile= new File("Images/plus.png");
+        File calendarImageFile=new File("Images/calendar.png");
+
         Image brandingImage = new Image(brandingFile.toURI().toString());
+        Image plusImageImage = new Image(plusFile.toURI().toString());
+        Image calendarImage=new Image(calendarImageFile.toURI().toString());
+
         brandingImageView.setImage(brandingImage);
+        plusImageView.setImage(plusImageImage);
+        calendarImageView.setImage(calendarImage);
     }
 }
 

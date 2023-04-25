@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf3f7a0d-a79c-4a27-b172-14c40fe9865a" name="Changes" comment="3rd scene changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/Cardata.java" afterDir="false" />
+    <list default="true" id="cf3f7a0d-a79c-4a27-b172-14c40fe9865a" name="Changes" comment="cardata list now working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/CarDataList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/CarDataList.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +151,49 @@
       <option name="project" value="LOCAL" />
       <updated>1682446103455</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="jackson added">
+      <created>1682457130441</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682457130441</updated>
+    </task>
+    <task id="LOCAL-00012" summary="car java created">
+      <created>1682457149378</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682457149378</updated>
+    </task>
+    <task id="LOCAL-00013" summary="cardata created">
+      <created>1682457157658</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1682457157658</updated>
+    </task>
+    <task id="LOCAL-00014" summary="small changes">
+      <created>1682457173538</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1682457173538</updated>
+    </task>
+    <task id="LOCAL-00015" summary="small changes">
+      <created>1682457186796</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1682457186796</updated>
+    </task>
+    <task id="LOCAL-00016" summary="cardata list now working">
+      <created>1682457258357</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1682457258357</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,6 +218,11 @@
     <MESSAGE value="id added" />
     <MESSAGE value="car upload now gets userId" />
     <MESSAGE value="3rd scene changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="3rd scene changes" />
+    <MESSAGE value="jackson added" />
+    <MESSAGE value="car java created" />
+    <MESSAGE value="cardata created" />
+    <MESSAGE value="small changes" />
+    <MESSAGE value="cardata list now working" />
+    <option name="LAST_COMMIT_MESSAGE" value="cardata list now working" />
   </component>
 </project>
