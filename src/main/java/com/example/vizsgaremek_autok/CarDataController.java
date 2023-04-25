@@ -3,7 +3,9 @@ package com.example.vizsgaremek_autok;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -16,6 +18,7 @@ import java.io.Console;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.io.IOException;
 
 public class CarDataController implements Initializable {
     @FXML
@@ -48,6 +51,8 @@ public class CarDataController implements Initializable {
     private ImageView brandingImageView;
     @FXML
     private Label successfulUploadLabel;
+    @FXML
+    private Button UploadBut;
     private LoginModell loginModell;
 
     @Override
@@ -58,7 +63,7 @@ public class CarDataController implements Initializable {
 
     }
 
-    public void UploadButtonOnAction(ActionEvent event) {
+    public void UploadButtonOnAction(ActionEvent event) throws IOException {
         int modelYear = Integer.parseInt(ModelYearLabel.getText());
         int carPower = Integer.parseInt(CarPowerLabel.getText());
         int doors = Integer.parseInt(DoorsLabel.getText());
@@ -70,6 +75,16 @@ public class CarDataController implements Initializable {
                 .header("Content-Type", "application/json")
                 .body(carDataDTO).asJson().getStatus();
         successfulUploadLabel.setText("Autó feltőltése sikeres!");
+
+        Stage stage = (Stage) UploadBut.getScene().getWindow();
+        stage.close();
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarDataList.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 1200);
+        Stage stage3 = new Stage();
+        stage3.setTitle("Logged In");
+        stage3.setScene(scene);
+        stage3.show();
+
     }
 
 

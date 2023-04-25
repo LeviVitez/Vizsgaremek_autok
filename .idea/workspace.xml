@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf3f7a0d-a79c-4a27-b172-14c40fe9865a" name="Changes" comment="minor changes in the code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginModell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginResponse.java" afterDir="false" />
+    <list default="true" id="cf3f7a0d-a79c-4a27-b172-14c40fe9865a" name="Changes" comment="car upload now gets userId">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +117,28 @@
       <option name="project" value="LOCAL" />
       <updated>1682365248076</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="global userId">
+      <created>1682445123889</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682445123889</updated>
+    </task>
+    <task id="LOCAL-00008" summary="id added">
+      <created>1682445134181</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682445134181</updated>
+    </task>
+    <task id="LOCAL-00009" summary="car upload now gets userId">
+      <created>1682445184568</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682445184568</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +159,9 @@
     <MESSAGE value="storing userId" />
     <MESSAGE value="making userid globally accessible" />
     <MESSAGE value="minor changes in the code" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes in the code" />
+    <MESSAGE value="global userId" />
+    <MESSAGE value="id added" />
+    <MESSAGE value="car upload now gets userId" />
+    <option name="LAST_COMMIT_MESSAGE" value="car upload now gets userId" />
   </component>
 </project>

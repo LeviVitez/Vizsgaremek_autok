@@ -80,6 +80,8 @@ public class LoginController implements Initializable {
                 LogiResponse logiResponse = new LogiResponse(Integer.parseInt(userId),token);
                 loginModell = new LoginModell(logiResponse);
                 loginMessageLabel.setText("Succesful Login!");
+                Stage stage = (Stage) loginButton.getScene().getWindow();
+                stage.close();
                 FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 520, 802);
                 Stage stage2 = new Stage();
@@ -99,37 +101,4 @@ public class LoginController implements Initializable {
 
 
     }
-    public String getUserId() {
-        return userId;
-    }
-    /*public void validateLogin() {
-        try {
-            LoginDTO loginDTO = new LoginDTO(usernameTextField.getText(), enterpasswordField.getText());
-            int status = Unirest.post("http://localhost:3001/auth/login")
-                    .header("Content-Type", "application/json")
-                    .body(loginDTO).asJson().getStatus();
-            if (status == 201) {
-
-                loginMessageLabel.setText("Succesful Login!");
-                Stage stage = (Stage) loginButton.getScene().getWindow();
-                stage.close();
-
-
-
-                FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 520, 802);
-                Stage stage2 = new Stage();
-                stage2.initStyle(StageStyle.UNDECORATED);
-                stage2.setTitle("Logged In");
-                stage2.setScene(scene);
-                stage2.show();
-            } else {
-                loginMessageLabel.setText("Username or Password doesn't match. Please try Again.");
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            e.getCause();
-        }
-    }*/
 }
