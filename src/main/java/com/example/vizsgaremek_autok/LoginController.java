@@ -36,9 +36,8 @@ public class LoginController implements Initializable {
     @FXML
     private Button loginButton;
     public String userId;
-    public String getUserId(){
-        return userId;
-    }
+    public String token;
+    private LoginModell loginModell;
 
 
 
@@ -65,62 +64,45 @@ public class LoginController implements Initializable {
     }
 
 
-        public void validateLogin() {
-            try {
-                LoginDTO loginDTO = new LoginDTO(usernameTextField.getText(), enterpasswordField.getText());
-                HttpResponse<JsonNode> response = Unirest.post("http://localhost:3001/auth/login")
-                        .header("Content-Type", "application/json")
-                        .body(loginDTO).asJson();
-                int status = response.getStatus();
-                if (status == 201) {
-                    JSONObject responseBody = response.getBody().getObject();
-                    userId = responseBody.getString("userId");
-                    System.out.println(userId);
-
-                    loginMessageLabel.setText("Succesful Login!");
-                    FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
-                    Scene scene = new Scene(fxmlLoader.load(), 520, 802);
-                    Stage stage2 = new Stage();
-                    stage2.initStyle(StageStyle.UNDECORATED);
-                    stage2.setTitle("Logged In");
-                    stage2.setScene(scene);
-                    stage2.show();
-                } else {
-                    loginMessageLabel.setText("Username or Password doesn't match. Please try Again.");
-                }
-
-            } catch (Exception e) {
-                e.printStackTrace();
-                e.getCause();
+    public void validateLogin() {
+        try {
+            LoginDTO loginDTO = new LoginDTO(usernameTextField.getText(), enterpasswordField.getText());
+            HttpResponse<JsonNode> response = Unirest.post("http://localhost:3001/auth/login")
+                    .header("Content-Type", "application/json")
+                    .body(loginDTO).asJson();
+            int status = response.getStatus();
+            if (status == 201) {
+                JSONObject responseBody = response.getBody().getObject();
+                userId = responseBody.getString("userId");
+                token = responseBody.getString("token");
+                System.out.println(userId);
+                System.out.println(token);
+                LogiResponse logiResponse = new LogiResponse(Integer.parseInt(userId),token);
+                loginModell = new LoginModell(logiResponse);
+                loginMessageLabel.setText("Succesful Login!");
+                FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
+                Scene scene = new Scene(fxmlLoader.load(), 520, 802);
+                Stage stage2 = new Stage();
+                stage2.initStyle(StageStyle.UNDECORATED);
+                stage2.setTitle("Logged In");
+                stage2.setScene(scene);
+                ((CarDataController) fxmlLoader.getController()).setLoginForCarData(loginModell);
+                stage2.show();
+            } else {
+                loginMessageLabel.setText("Username or Password doesn't match. Please try Again.");
             }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            e.getCause();
         }
 
 
-    public class globaluserid {
-
-        public String globalVariable;
-
-        public void setGlobalVariable() {
-            this.globalVariable = userId;
-        }
-
-        public String getGlobalVariable() {
-            return this.globalVariable;
-        }
     }
-
-   /* public String getUserId() {
+    public String getUserId() {
         return userId;
     }
-
-
-
-    public class Constants {
-        public static String UserId=userid;
-    }
-
-
-    public void validateLogin() {
+    /*public void validateLogin() {
         try {
             LoginDTO loginDTO = new LoginDTO(usernameTextField.getText(), enterpasswordField.getText());
             int status = Unirest.post("http://localhost:3001/auth/login")

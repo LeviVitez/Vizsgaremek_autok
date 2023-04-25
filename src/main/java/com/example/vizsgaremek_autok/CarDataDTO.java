@@ -1,18 +1,18 @@
 package com.example.vizsgaremek_autok;
 
 public class CarDataDTO {
-private String givenName;
-private String brand;
-private String model;
-private Number modelYear;
-private String fuelType;
-private Number carPower;
-private String gearType;
-private String color;
-private String chassisType;
-private Number doors;
-private String fuelEconomy;
-private String license_plate;
+    private String givenName;
+    private String brand;
+    private String model;
+    private Number modelYear;
+    private String fuelType;
+    private Number carPower;
+    private String gearType;
+    private String color;
+    private String chassisType;
+    private Number doors;
+    private String fuelEconomy;
+    private String license_plate;
 
 
 
