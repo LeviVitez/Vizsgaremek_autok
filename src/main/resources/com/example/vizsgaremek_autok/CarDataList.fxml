@@ -133,6 +133,6 @@
             <Label layoutX="14.0" layoutY="138.0" text="test" />
          </children>
       </AnchorPane>
-      <Button fx:id="exitBut" layoutX="419.0" layoutY="573.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" text="Kilépés" />
+      <Button fx:id="ExitButton" layoutX="419.0" layoutY="573.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="99.0" text="Kilépés" />
    </children>
 </AnchorPane>

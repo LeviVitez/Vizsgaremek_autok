@@ -3,11 +3,15 @@ package com.example.vizsgaremek_autok;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -17,6 +21,8 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class CarDataListController implements Initializable {
+    @FXML
+    private Button ExitButton;
     @FXML
     private ImageView brandingImageView;
     @FXML
@@ -112,6 +118,11 @@ public class CarDataListController implements Initializable {
         brandingImageView.setImage(brandingImage);
         plusImageView.setImage(plusImageImage);
         calendarImageView.setImage(calendarImage);
+    }
+
+    public void ExitButtonOnAction(ActionEvent event) {
+        Stage stage = (Stage) ExitButton.getScene().getWindow();
+        stage.close();
     }
 }
 
