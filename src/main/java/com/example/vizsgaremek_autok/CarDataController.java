@@ -54,6 +54,8 @@ public class CarDataController implements Initializable {
     @FXML
     private Button UploadBut;
     private LoginModell loginModell;
+    @FXML
+    private Button AddEvent;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -92,6 +94,17 @@ public class CarDataController implements Initializable {
         Stage stage = (Stage) ExitBut.getScene().getWindow();
         stage.close();
         Platform.exit();
+    }
+
+    public void OpenAddEventOnAction(ActionEvent event) {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 520, 802);
+        Stage stage2 = new Stage();
+        stage2.initStyle(StageStyle.UNDECORATED);
+        stage2.setTitle("AddEvent");
+        stage2.setScene(scene);
+        ((CarDataController) fxmlLoader.getController()).setLoginForCarData(AddEvent);
+        stage2.show();
     }
 
     public void setLoginForCarData(LoginModell loginModell){
