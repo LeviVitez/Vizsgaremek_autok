@@ -27,6 +27,7 @@ public class CarDataListController implements Initializable {
     private ImageView brandingImageView;
     @FXML
     private ImageView calendarImageView;
+    @FXML ImageView carListImageView;
     @FXML
     private ImageView plusImageView;
     @FXML
@@ -110,14 +111,17 @@ public class CarDataListController implements Initializable {
         File brandingFile = new File("Images/MicrosoftTeams-image.png");
         File plusFile= new File("Images/plus.png");
         File calendarImageFile=new File("Images/calendar.png");
+        File carListImageFile = new File("Images/carList.png");
 
         Image brandingImage = new Image(brandingFile.toURI().toString());
         Image plusImageImage = new Image(plusFile.toURI().toString());
-        Image calendarImage=new Image(calendarImageFile.toURI().toString());
+        Image calendarImage = new Image(calendarImageFile.toURI().toString());
+        Image carListImage = new Image(carListImageFile.toURI().toString());
 
         brandingImageView.setImage(brandingImage);
         plusImageView.setImage(plusImageImage);
         calendarImageView.setImage(calendarImage);
+
     }
 
     public void ExitButtonOnAction(ActionEvent event) {
