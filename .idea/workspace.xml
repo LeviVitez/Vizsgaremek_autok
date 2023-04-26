@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf3f7a0d-a79c-4a27-b172-14c40fe9865a" name="Changes" comment="small style change in login.fxml">
-      <change afterPath="$PROJECT_DIR$/Images/cardatadone.png" afterDir="false" />
+    <list default="true" id="cf3f7a0d-a79c-4a27-b172-14c40fe9865a" name="Changes" comment="CarData ReStyled">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/CarData.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/CarData.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataListController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682529643351</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="CarData ReStyled">
+      <created>1682534044406</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682534044406</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,6 +181,7 @@
     <MESSAGE value="minor changes in the code" />
     <MESSAGE value="pictures added to addEvent" />
     <MESSAGE value="small style change in login.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="small style change in login.fxml" />
+    <MESSAGE value="CarData ReStyled" />
+    <option name="LAST_COMMIT_MESSAGE" value="CarData ReStyled" />
   </component>
 </project>

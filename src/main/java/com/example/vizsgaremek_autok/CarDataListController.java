@@ -138,7 +138,7 @@ public class CarDataListController implements Initializable {
         Stage stage = (Stage) AddEvent.getScene().getWindow();
         stage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AddEvent.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 802);
+        Scene scene = new Scene(fxmlLoader.load(), 601, 468);
         Stage stage2 = new Stage();
         stage2.setTitle("AddEvent");
         stage2.setScene(scene);
