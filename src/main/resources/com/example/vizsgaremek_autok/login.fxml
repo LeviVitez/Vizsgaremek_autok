@@ -33,7 +33,7 @@
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="363.0" layoutY="440.0" prefHeight="17.0" prefWidth="295.0" textFill="#ff0606">
+                  <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="311.0" layoutY="440.0" prefHeight="21.0" prefWidth="400.0" style="-fx-font-weight: bold;" textFill="#ff0606">
                      <font>
                         <Font size="15.0" />
                      </font>
