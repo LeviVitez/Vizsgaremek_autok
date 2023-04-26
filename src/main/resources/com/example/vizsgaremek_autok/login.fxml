@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.effect.DropShadow?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="1021.0" style="-fx-background-color: #F0FFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.LoginController">
    <right>
       <AnchorPane prefHeight="0.0" prefWidth="0.0" BorderPane.alignment="CENTER">
@@ -37,6 +38,9 @@
                      <font>
                         <Font size="15.0" />
                      </font>
+                     <effect>
+                        <DropShadow color="black" radius="4" spread="4" />
+                     </effect>
                   </Label>
                   <Button fx:id="ExitButton" layoutX="398.0" layoutY="509.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: black; -fx-font-weight: bold; -fx-border-color: white;" text="Exit" textFill="WHITE">
                      <font>
