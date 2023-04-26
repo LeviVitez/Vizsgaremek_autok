@@ -62,7 +62,7 @@ public class CarDataController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File brandingFile = new File("Images/MicrosoftTeams-image.png");
+        File brandingFile = new File("Images/TeAutodLogo.png");
         File addeventfile=new File("Images/cardatadone.png");
         Image brandingImage = new Image(brandingFile.toURI().toString());
         Image addeventfileimage=new Image(addeventfile.toURI().toString());

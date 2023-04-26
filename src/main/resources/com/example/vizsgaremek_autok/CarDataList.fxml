@@ -13,7 +13,7 @@
          <children>
             <ImageView fx:id="brandingImageView" fitHeight="42.0" fitWidth="69.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
+                  <Image url="@../../../../../../Images/TeAutodLogo.png" />
                </image>
             </ImageView>
             <Label layoutX="100.0" layoutY="40.0" text="Az autód adatai">

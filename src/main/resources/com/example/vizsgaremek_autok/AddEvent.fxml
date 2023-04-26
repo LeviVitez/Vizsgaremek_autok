@@ -15,7 +15,7 @@
          <children>
             <ImageView fitHeight="47.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
+                  <Image url="@../../../../../../Images/TeAutodLogo.png" />
                </image>
             </ImageView>
             <Label layoutX="232.0" layoutY="20.0" prefHeight="35.0" prefWidth="137.0" text="Események" textAlignment="CENTER">

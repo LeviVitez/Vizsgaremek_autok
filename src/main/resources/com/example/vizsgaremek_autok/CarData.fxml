@@ -15,7 +15,7 @@
          <children>
             <ImageView fx:id="brandingImageView" fitHeight="42.0" fitWidth="69.0" layoutX="403.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
+                  <Image url="@../../../../../../Images/TeAutodLogo.png" />
                </image>
             </ImageView>
             <Label layoutX="470.0" layoutY="28.0" style="-fx-font-weight: bold;" text="Autó feltöltése">

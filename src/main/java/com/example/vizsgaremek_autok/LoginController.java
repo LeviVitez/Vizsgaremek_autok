@@ -45,7 +45,7 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File brandingFile = new File("Images/MicrosoftTeams-image.png");
+        File brandingFile = new File("Images/TeAutodLogo.png");
         File suprafile=new File("Images/supra.png");
 
         Image brandingImage = new Image(brandingFile.toURI().toString());
