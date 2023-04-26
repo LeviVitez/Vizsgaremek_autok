@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="468.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.AddEvent">
    <children>
       <AnchorPane prefHeight="74.0" prefWidth="601.0" style="-fx-background-color: #F0FFFF;">
@@ -28,9 +27,9 @@
       </AnchorPane>
       <AnchorPane layoutY="74.0" prefHeight="393.0" prefWidth="601.0">
          <children>
-            <ImageView fitHeight="393.0" fitWidth="601.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="AddeventImageView" fitHeight="393.0" fitWidth="601.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Images/In-House-_-Third-Party-Fleet-Management-What-You-Need-to-Know-03-1024x600.jpg" />
+                  <Image url="@../../../../../../Images/addevent.png" />
                </image>
             </ImageView>
             <Label layoutX="130.0" layoutY="311.0" prefHeight="20.0" prefWidth="188.0" text="Írja be az esemény dátumát:">

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="622.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.CarDataListController">
+<AnchorPane prefHeight="622.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.CarDataListController">
    <children>
       <AnchorPane layoutY="-2.0" prefHeight="95.0" prefWidth="604.0" style="-fx-background-color: #F0FFFF;">
          <children>
@@ -108,7 +108,7 @@
             <Image url="@../../../../../../Images/plus.png" />
          </image>
       </ImageView>
-      <Button layoutX="389.0" layoutY="506.0" mnemonicParsing="false" text="Esemény hozzáadása">
+      <Button fx:id="AddEvent" layoutX="389.0" layoutY="506.0" mnemonicParsing="false" onAction="#AddEventOnAction" text="Esemény hozzáadása">
          <font>
             <Font size="15.0" />
          </font>

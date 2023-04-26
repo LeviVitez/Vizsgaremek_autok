@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import kong.unirest.Unirest;
 
 import java.io.Console;
@@ -89,23 +90,13 @@ public class CarDataController implements Initializable {
         stage3.show();
     }
 
-
     public void ExitButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) ExitBut.getScene().getWindow();
         stage.close();
         Platform.exit();
     }
 
-    public void OpenAddEventOnAction(ActionEvent event) {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 520, 802);
-        Stage stage2 = new Stage();
-        stage2.initStyle(StageStyle.UNDECORATED);
-        stage2.setTitle("AddEvent");
-        stage2.setScene(scene);
-        ((CarDataController) fxmlLoader.getController()).setLoginForCarData(AddEvent);
-        stage2.show();
-    }
+
 
     public void setLoginForCarData(LoginModell loginModell){
         this.loginModell = loginModell;
