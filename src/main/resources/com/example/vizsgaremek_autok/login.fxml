@@ -10,33 +10,46 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" style="-fx-background-color: #F0FFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.LoginController">
-   <left>
-      <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label layoutX="148.0" layoutY="287.0" text="Password" />
-            <Label layoutX="149.0" layoutY="245.0" text="Username" />
-         </children>
-      </AnchorPane>
-   </left>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="1021.0" style="-fx-background-color: #F0FFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.LoginController">
    <right>
-      <AnchorPane prefHeight="400.0" prefWidth="290.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="0.0" prefWidth="0.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="usernameTextField" layoutX="-20.0" layoutY="242.0" prefHeight="25.0" prefWidth="160.0" promptText="Username" />
-            <PasswordField fx:id="enterpasswordField" layoutX="-20.0" layoutY="284.0" prefHeight="25.0" prefWidth="160.0" promptText="Password" />
-            <Button fx:id="loginButton" layoutX="-84.0" layoutY="324.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="225.0" text="Login" />
-            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="-121.0" layoutY="210.0" prefHeight="17.0" prefWidth="295.0" textFill="#ff0606" />
-            <Button fx:id="ExitButton" layoutX="-84.0" layoutY="361.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="225.0" text="Exit" />
-            <ImageView fx:id="brandingImageView" fitHeight="150.0" fitWidth="200.0" layoutX="-72.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="supraImageView" fitHeight="1069.0" fitWidth="1021.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
+                  <Image url="@../../../../../../Images/supra.png" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" layoutX="-56.0" layoutY="131.0" prefHeight="87.0" prefWidth="181.0" text="TeAutod.hu">
-               <font>
-                  <Font size="35.0" />
-               </font>
-            </Label>
+            <AnchorPane prefHeight="718.0" prefWidth="1021.0">
+               <children>
+                  <ImageView fx:id="brandingImageView" fitHeight="103.0" fitWidth="130.0" layoutX="855.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="431.0" layoutY="367.0" prefHeight="25.0" prefWidth="160.0" promptText="Username" style="-fx-background-color: #002b3e; -fx-border-color: white; -fx-text-inner-color: white;" />
+                  <PasswordField fx:id="enterpasswordField" alignment="CENTER" layoutX="431.0" layoutY="407.0" prefHeight="25.0" prefWidth="160.0" promptText="Password" style="-fx-background-color: #002b3e; -fx-border-color: white; -fx-text-inner-color: white;" />
+                  <Button fx:id="loginButton" layoutX="398.0" layoutY="467.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: black; -fx-font-weight: bold; -fx-border-color: white;" text="Login" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="363.0" layoutY="440.0" prefHeight="17.0" prefWidth="295.0" textFill="#ff0606">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="ExitButton" layoutX="398.0" layoutY="509.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: black; -fx-font-weight: bold; -fx-border-color: white;" text="Exit" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" layoutX="818.0" layoutY="667.0" prefHeight="51.0" prefWidth="203.0" style="-fx-font-weight: bold;" text="TeAutod.hu" textFill="WHITE">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </right>

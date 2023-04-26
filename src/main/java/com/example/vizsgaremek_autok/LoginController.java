@@ -30,6 +30,8 @@ public class LoginController implements Initializable {
     @FXML
     private ImageView brandingImageView;
     @FXML
+    private ImageView supraImageView;
+    @FXML
     private TextField usernameTextField;
     @FXML
     private PasswordField enterpasswordField;
@@ -44,8 +46,14 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         File brandingFile = new File("Images/MicrosoftTeams-image.png");
+        File suprafile=new File("Images/supra.png");
+
         Image brandingImage = new Image(brandingFile.toURI().toString());
+        Image supraImage=new Image(suprafile.toURI().toString());
+
         brandingImageView.setImage(brandingImage);
+        supraImageView.setImage(supraImage);
+
 
     }
 

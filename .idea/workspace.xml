@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf3f7a0d-a79c-4a27-b172-14c40fe9865a" name="Changes" comment="minor changes in the code">
-      <change afterPath="$PROJECT_DIR$/Images/In-House-_-Third-Party-Fleet-Management-What-You-Need-to-Know-03-1024x600.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/AddEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/AddEvent.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/supra.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__04__25__20_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__04__25__20_11__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +44,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/szar2/Images",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/szar2/Images&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\szar2\Images" />
