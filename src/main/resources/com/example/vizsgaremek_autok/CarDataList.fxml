@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.CarDataListController">
+<AnchorPane prefHeight="622.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.CarDataListController">
    <children>
       <AnchorPane layoutY="-2.0" prefHeight="95.0" prefWidth="604.0" style="-fx-background-color: #F0FFFF;">
          <children>
-            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="brandingImageView" fitHeight="42.0" fitWidth="69.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
                </image>
@@ -23,7 +23,10 @@
             </Label>
          </children>
       </AnchorPane>
-      <Label layoutX="106.0" layoutY="103.0" text="Márka" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="97.0" text="Márka" underline="true">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
       <Label layoutX="106.0" layoutY="145.0" text="Modell" />
       <Label layoutX="106.0" layoutY="187.0" text="Évjárat" />
       <Label layoutX="106.0" layoutY="229.0" text="Üzemanyag" />
@@ -34,57 +37,57 @@
       <Label layoutX="106.0" layoutY="440.0" text="Ajtók száma" />
       <Label layoutX="106.0" layoutY="482.0" text="Fogyasztás" />
       <Label layoutX="106.0" layoutY="524.0" text="Rendszám" />
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carpic1" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carpic2" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carpic3" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="capic4" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carpic5" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carpic6" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carpic7" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carpic8" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carpic9" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carpic10" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carpic11" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
@@ -100,7 +103,7 @@
       <Label fx:id="doors" layoutX="114.0" layoutY="462.0" text="Adat9" />
       <Label fx:id="fuelEchonomy" layoutX="114.0" layoutY="504.0" text="Adat10" />
       <Label fx:id="licence_plate" layoutX="114.0" layoutY="546.0" text="Adat11" />
-      <ImageView fitHeight="42.0" fitWidth="38.0" layoutX="339.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="plusImageView" fitHeight="42.0" fitWidth="38.0" layoutX="339.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/plus.png" />
          </image>
@@ -117,7 +120,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <ImageView fitHeight="42.0" fitWidth="34.0" layoutX="255.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="calendarImageView" fitHeight="42.0" fitWidth="34.0" layoutX="255.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Images/calendar.png" />
                </image>
@@ -130,5 +133,6 @@
             <Label layoutX="14.0" layoutY="138.0" text="test" />
          </children>
       </AnchorPane>
+      <Button fx:id="ExitButton" layoutX="419.0" layoutY="573.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="99.0" text="Kilépés" />
    </children>
 </AnchorPane>
