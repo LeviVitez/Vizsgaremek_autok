@@ -3,101 +3,155 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="802.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.CarDataController">
+<AnchorPane prefHeight="802.0" prefWidth="1021.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.CarDataController">
    <children>
-      <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #F0FFFF;">
+      <AnchorPane prefHeight="82.0" prefWidth="1079.0" style="-fx-background-color: #F0FFFF;">
          <children>
-            <ImageView fx:id="brandingImageView" fitHeight="42.0" fitWidth="69.0" layoutX="32.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="brandingImageView" fitHeight="42.0" fitWidth="69.0" layoutX="403.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
                </image>
             </ImageView>
-            <Label layoutX="110.0" layoutY="28.0" text="Autó feltöltése">
+            <Label layoutX="470.0" layoutY="28.0" style="-fx-font-weight: bold;" text="Autó feltöltése">
                <font>
-                  <Font size="18.0" />
+                  <Font size="20.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <Label layoutX="92.0" layoutY="109.0" text="Auto neve">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="CarNameLabel" layoutX="92.0" layoutY="128.0" prefHeight="25.0" prefWidth="336.0" />
-      <Label layoutX="92.0" layoutY="153.0" text="Autó márkája">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="CarBrandLabel" layoutX="92.0" layoutY="172.0" prefHeight="25.0" prefWidth="336.0" />
-      <Label layoutX="92.0" layoutY="197.0" text="Model">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="ModelLabel" layoutX="92.0" layoutY="216.0" prefHeight="25.0" prefWidth="336.0" />
-      <Label layoutX="92.0" layoutY="241.0" text="Évjárat">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="ModelYearLabel" layoutX="92.0" layoutY="260.0" prefHeight="25.0" prefWidth="336.0" />
-      <Label layoutX="92.0" layoutY="285.0" text="Üzemanyag">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="FuelLabel" layoutX="92.0" layoutY="304.0" prefHeight="25.0" prefWidth="336.0" />
-      <Label layoutX="92.0" layoutY="329.0" text="Lóerő">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="92.0" layoutY="373.0" text="Váltó típósa">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="GearTypeLabel" layoutX="92.0" layoutY="392.0" prefHeight="25.0" prefWidth="336.0" />
-      <Label layoutX="92.0" layoutY="417.0" text="Szín">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="ColorLabel" layoutX="92.0" layoutY="436.0" prefHeight="25.0" prefWidth="336.0" />
-      <Label layoutX="92.0" layoutY="461.0" text="Kaszni">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="ChassiTypeLabel" layoutX="92.0" layoutY="480.0" prefHeight="25.0" prefWidth="336.0" promptText="Kombi" />
-      <Label layoutX="92.0" layoutY="505.0" text="Ajtók száma">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="DoorsLabel" layoutX="92.0" layoutY="524.0" prefHeight="25.0" prefWidth="336.0" />
-      <Label layoutX="92.0" layoutY="549.0" text="Fogyasztás">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="FuelEconomyLabel" layoutX="92.0" layoutY="568.0" prefHeight="25.0" prefWidth="336.0" promptText="10 lieter / 100 km" />
-      <Label layoutX="92.0" layoutY="593.0" text="Rendszám">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="LicencePlateLabel" layoutX="92.0" layoutY="612.0" prefHeight="25.0" prefWidth="336.0" promptText="AAA-123" />
-      <Button fx:id="UploadBut" layoutX="92.0" layoutY="709.0" mnemonicParsing="false" onAction="#UploadButtonOnAction" prefHeight="25.0" prefWidth="336.0" text="Feltöltés" />
-      <Button fx:id="ExitBut" layoutX="92.0" layoutY="750.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="336.0" text="Bezárás" />
-      <TextField fx:id="CarPowerLabel" layoutX="92.0" layoutY="348.0" prefHeight="25.0" prefWidth="336.0" />
+      <AnchorPane layoutY="85.0" prefHeight="717.0" prefWidth="524.0">
+         <children>
+            <ImageView fx:id="addEventImageView" fitHeight="813.0" fitWidth="1164.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/cardatadone.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="372.0" layoutY="42.0" style="-fx-font-weight: bold;" text="Autónak adott név">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <TextField fx:id="CarNameLabel" layoutX="372.0" layoutY="61.0" prefHeight="25.0" prefWidth="336.0" promptText="Az én Hondám" />
+            <Label layoutX="372.0" layoutY="86.0" style="-fx-font-weight: bold;" text="Autó márkája">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <TextField fx:id="CarBrandLabel" layoutX="372.0" layoutY="105.0" prefHeight="25.0" prefWidth="336.0" promptText="honda" />
+            <Label layoutX="372.0" layoutY="130.0" style="-fx-font-weight: bold;" text="Model">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <TextField fx:id="ModelLabel" layoutX="372.0" layoutY="149.0" prefHeight="25.0" prefWidth="336.0" promptText="civic" />
+            <Label layoutX="372.0" layoutY="174.0" style="-fx-font-weight: bold;" text="Évjárat">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <TextField fx:id="ModelYearLabel" layoutX="372.0" layoutY="193.0" prefHeight="25.0" prefWidth="336.0" promptText="2000" />
+            <Label layoutX="372.0" layoutY="218.0" style="-fx-font-weight: bold;" text="Üzemanyag">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <TextField fx:id="FuelLabel" layoutX="372.0" layoutY="237.0" prefHeight="25.0" prefWidth="336.0" promptText="benzin" />
+            <Label layoutX="372.0" layoutY="262.0" style="-fx-font-weight: bold;" text="Lóerő">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <Label layoutX="372.0" layoutY="306.0" style="-fx-font-weight: bold;" text="Váltó típúsa">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <TextField fx:id="GearTypeLabel" layoutX="372.0" layoutY="325.0" prefHeight="25.0" prefWidth="336.0" promptText="manuál 5 sebességes" />
+            <Label layoutX="372.0" layoutY="350.0" style="-fx-font-weight: bold;" text="Szín">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <TextField fx:id="ColorLabel" layoutX="372.0" layoutY="369.0" prefHeight="25.0" prefWidth="336.0" promptText="Ezüst" />
+            <Label layoutX="372.0" layoutY="394.0" style="-fx-font-weight: bold;" text="Kaszni">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <TextField fx:id="ChassiTypeLabel" layoutX="372.0" layoutY="413.0" prefHeight="25.0" prefWidth="336.0" promptText="Szedán" />
+            <Label layoutX="372.0" layoutY="438.0" style="-fx-font-weight: bold;" text="Ajtók száma">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <TextField fx:id="DoorsLabel" layoutX="372.0" layoutY="457.0" prefHeight="25.0" prefWidth="336.0" promptText="4" />
+            <Label layoutX="372.0" layoutY="482.0" style="-fx-font-weight: bold;" text="Fogyasztás">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <TextField fx:id="FuelEconomyLabel" layoutX="372.0" layoutY="501.0" prefHeight="25.0" prefWidth="336.0" promptText="10 liter / 100 km" />
+            <Label layoutX="372.0" layoutY="526.0" style="-fx-font-weight: bold;" text="Rendszám">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <TextField fx:id="LicencePlateLabel" layoutX="372.0" layoutY="545.0" prefHeight="25.0" prefWidth="336.0" promptText="AAA-123" />
+            <Button fx:id="UploadBut" layoutX="729.0" layoutY="757.0" mnemonicParsing="false" onAction="#UploadButtonOnAction" prefHeight="42.0" prefWidth="336.0" style="-fx-font-weight: bold;" text="Feltöltés">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="ExitBut" layoutX="14.0" layoutY="757.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="42.0" prefWidth="336.0" style="-fx-font-weight: bold;" text="Bezárás">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <TextField fx:id="CarPowerLabel" layoutX="372.0" layoutY="281.0" prefHeight="25.0" prefWidth="336.0" promptText="160" />
+         </children>
+      </AnchorPane>
       <Label fx:id="successfulUploadLabel" alignment="CENTER" layoutX="-2.0" layoutY="82.0" prefHeight="19.0" prefWidth="520.0" textAlignment="CENTER" textFill="#0634ff">
          <font>
             <Font size="13.0" />

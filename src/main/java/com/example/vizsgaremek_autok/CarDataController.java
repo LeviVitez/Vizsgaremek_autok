@@ -51,6 +51,8 @@ public class CarDataController implements Initializable {
     @FXML
     private ImageView brandingImageView;
     @FXML
+    private ImageView addEventImageView;
+    @FXML
     private Label successfulUploadLabel;
     @FXML
     private Button UploadBut;
@@ -61,9 +63,11 @@ public class CarDataController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         File brandingFile = new File("Images/MicrosoftTeams-image.png");
+        File addeventfile=new File("Images/cardatadone.png");
         Image brandingImage = new Image(brandingFile.toURI().toString());
+        Image addeventfileimage=new Image(addeventfile.toURI().toString());
         brandingImageView.setImage(brandingImage);
-
+        addEventImageView.setImage(addeventfileimage);
     }
 
     public void UploadButtonOnAction(ActionEvent event) throws IOException {

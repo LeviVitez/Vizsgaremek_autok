@@ -94,7 +94,7 @@ public class LoginController implements Initializable {
 
 
                 FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 520, 802);
+                Scene scene = new Scene(fxmlLoader.load(), 1079, 898);
                 Stage stage2 = new Stage();
                 stage2.initStyle(StageStyle.UNDECORATED);
                 stage2.setTitle("Logged In");
