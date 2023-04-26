@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="468.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.AddEvent">
+   <children>
+      <AnchorPane prefHeight="74.0" prefWidth="601.0" style="-fx-background-color: #F0FFFF;">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/MicrosoftTeams-image.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="232.0" layoutY="20.0" prefHeight="35.0" prefWidth="137.0" text="Események" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="74.0" prefHeight="393.0" prefWidth="601.0">
+         <children>
+            <ImageView fitHeight="393.0" fitWidth="601.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Images/In-House-_-Third-Party-Fleet-Management-What-You-Need-to-Know-03-1024x600.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="130.0" layoutY="311.0" prefHeight="20.0" prefWidth="188.0" text="Írja be az esemény dátumát:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="319.0" layoutY="309.0" promptText="2023.01.01 0:00" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="112.0" layoutY="95.0" prefHeight="20.0" prefWidth="227.0" text="Válassza ki a közelgó eseményeket:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="512.0" layoutY="429.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Hozzáad" />
+      <Button layoutX="14.0" layoutY="429.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Mégse" />
+      <ComboBox fx:id="Events" layoutX="339.0" layoutY="93.0" prefWidth="150.0" promptText="Események" style="-fx-background-color: #ADD8E6;" visibleRowCount="12" />
+   </children>
+</AnchorPane>
