@@ -85,6 +85,7 @@
                   <DropShadow color="white" radius="2" spread="1" />
                </effect>
             </Label>
+            <TextField fx:id="CarPowerLabel" layoutX="372.0" layoutY="281.0" prefHeight="25.0" prefWidth="336.0" promptText="160" />
             <Label layoutX="372.0" layoutY="306.0" style="-fx-font-weight: bold;" text="Váltó típúsa">
                <font>
                   <Font size="13.0" />
@@ -149,10 +150,9 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <TextField fx:id="CarPowerLabel" layoutX="372.0" layoutY="281.0" prefHeight="25.0" prefWidth="336.0" promptText="160" />
          </children>
       </AnchorPane>
-      <Label fx:id="successfulUploadLabel" alignment="CENTER" layoutX="-2.0" layoutY="82.0" prefHeight="19.0" prefWidth="520.0" textAlignment="CENTER" textFill="#0634ff">
+      <Label fx:id="successfulUploadLabel" alignment="CENTER" layoutX="-2.0" layoutY="82.0" prefHeight="19.0" prefWidth="1078.0" textAlignment="CENTER" textFill="#0634ff">
          <font>
             <Font size="13.0" />
          </font>
