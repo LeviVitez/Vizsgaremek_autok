@@ -36,11 +36,5 @@ private Button megseButton;
     public void megseOnButtonAction(ActionEvent event) throws IOException {
         Stage stage = (Stage) megseButton.getScene().getWindow();
         stage.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarDataList.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 604, 622);
-        Stage stage3 = new Stage();
-        stage3.initStyle(StageStyle.UNDECORATED);
-        stage3.setScene(scene);
-        stage3.show();
     }
 }
