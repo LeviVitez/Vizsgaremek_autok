@@ -57,6 +57,8 @@ public class CarDataListController implements Initializable {
     @FXML
     private ImageView plusImageView;
     @FXML
+    private ImageView carDataListImageView;
+    @FXML
     private Label brand;
     @FXML
     private Label modell;
@@ -141,11 +143,13 @@ public class CarDataListController implements Initializable {
         File plusFile = new File("Images/plus.png");
         File calendarImageFile = new File("Images/calendar.png");
         File carListImageFile = new File("Images/carList.png");
+        File cardatalistfile=new File("Images/CarDataList.png");
 
         Image brandingImage = new Image(brandingFile.toURI().toString());
         Image plusImageImage = new Image(plusFile.toURI().toString());
         Image calendarImage = new Image(calendarImageFile.toURI().toString());
         Image carListImage = new Image(carListImageFile.toURI().toString());
+        Image carDataListImage=new Image(cardatalistfile.toURI().toString());
 
         brandingImageView.setImage(brandingImage);
         plusImageView.setImage(plusImageImage);
@@ -161,6 +165,7 @@ public class CarDataListController implements Initializable {
         carListImageView9.setImage(carListImage);
         carListImageView10.setImage(carListImage);
         carListImageView11.setImage(carListImage);
+        carDataListImageView.setImage(carDataListImage);
     }
 
     public void AddEventOnAction(ActionEvent event) throws IOException {
