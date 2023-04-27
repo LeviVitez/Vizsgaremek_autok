@@ -23,86 +23,116 @@
             </Label>
          </children>
       </AnchorPane>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="97.0" text="Márka" underline="true">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="99.0" prefHeight="30.0" prefWidth="70.0" style="-fx-font-weight: bold;" text="Márka:">
          <font>
             <Font size="20.0" />
          </font></Label>
-      <Label layoutX="106.0" layoutY="145.0" text="Modell" />
-      <Label layoutX="106.0" layoutY="187.0" text="Évjárat" />
-      <Label layoutX="106.0" layoutY="229.0" text="Üzemanyag" />
-      <Label layoutX="106.0" layoutY="272.0" text="Lóerő" />
-      <Label layoutX="106.0" layoutY="314.0" text="Váltó típúsa" />
-      <Label layoutX="106.0" layoutY="356.0" text="Szín" />
-      <Label layoutX="106.0" layoutY="398.0" text="Kaszni típúsa" />
-      <Label layoutX="106.0" layoutY="440.0" text="Ajtók száma" />
-      <Label layoutX="106.0" layoutY="482.0" text="Fogyasztás" />
-      <Label layoutX="106.0" layoutY="524.0" text="Rendszám" />
-      <ImageView fx:id="carListImageView1" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="46.0" layoutY="142.0" prefHeight="30.0" prefWidth="80.0" style="-fx-font-weight: bold;" text="Modell:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="47.0" layoutY="184.0" prefHeight="30.0" prefWidth="80.0" style="-fx-font-weight: bold;" text="Évjárat:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="46.0" layoutY="223.0" prefHeight="30.0" prefWidth="120.0" style="-fx-font-weight: bold;" text="Üzemanyag:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="46.0" layoutY="264.0" prefHeight="30.0" prefWidth="70.0" style="-fx-font-weight: bold;" text="Lóerő:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" layoutX="48.0" layoutY="305.0" prefHeight="27.0" prefWidth="108.0" style="-fx-font-weight: bold;" text="Váltó típúsa:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="47.0" layoutY="339.0" style="-fx-font-weight: bold;" text="Szín:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="44.0" layoutY="375.0" style="-fx-font-weight: bold;" text="Kaszni típúsa:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="48.0" layoutY="413.0" style="-fx-font-weight: bold;" text="Ajtók száma:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="48.0" layoutY="456.0" style="-fx-font-weight: bold;" text="Fogyasztás:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="45.0" layoutY="502.0" style="-fx-font-weight: bold;" text="Rendszám:">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <ImageView fx:id="carListImageView1" fitHeight="25.0" fitWidth="20.0" layoutX="24.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carListImageView2" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView2" fitHeight="25.0" fitWidth="20.0" layoutX="24.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carListImageView3" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView3" fitHeight="25.0" fitWidth="20.0" layoutX="24.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carListImageView4" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView4" fitHeight="25.0" fitWidth="20.0" layoutX="24.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carListImageView5" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView5" fitHeight="25.0" fitWidth="20.0" layoutX="24.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carListImageView6" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView6" fitHeight="25.0" fitWidth="20.0" layoutX="24.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carListImageView7" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView7" fitHeight="25.0" fitWidth="20.0" layoutX="24.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carListImageView8" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView8" fitHeight="25.0" fitWidth="20.0" layoutX="24.0" layoutY="379.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carListImageView9" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView9" fitHeight="25.0" fitWidth="20.0" layoutX="24.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carListImageView10" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView10" fitHeight="25.0" fitWidth="20.0" layoutX="24.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carListImageView11" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView11" fitHeight="25.0" fitWidth="20.0" layoutX="24.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <Label fx:id="brand" layoutX="111.0" layoutY="127.0" text="Adat1" />
-      <Label fx:id="modell" layoutX="114.0" layoutY="167.0" text="Adat2" />
-      <Label fx:id="modelYear" layoutX="114.0" layoutY="209.0" text="Adat3" />
-      <Label fx:id="fuelType" layoutX="114.0" layoutY="251.0" text="Adat4" />
-      <Label fx:id="carPower" layoutX="114.0" layoutY="294.0" text="Adat5" />
-      <Label fx:id="gearType" layoutX="114.0" layoutY="336.0" text="Adat6" />
-      <Label fx:id="color" layoutX="114.0" layoutY="378.0" text="Adat7" />
-      <Label fx:id="chassisType" layoutX="116.0" layoutY="420.0" text="Adat8" />
-      <Label fx:id="doors" layoutX="114.0" layoutY="462.0" text="Adat9" />
-      <Label fx:id="fuelEchonomy" layoutX="114.0" layoutY="504.0" text="Adat10" />
-      <Label fx:id="licence_plate" layoutX="114.0" layoutY="546.0" text="Adat11" />
+      <Label fx:id="brand" contentDisplay="CENTER" layoutX="120.0" layoutY="104.0" prefHeight="25.0" prefWidth="120.0" text="Adat1" />
+      <Label fx:id="modell" layoutX="119.0" layoutY="147.0" prefHeight="25.0" prefWidth="120.0" text="Adat2" />
+      <Label fx:id="modelYear" layoutX="119.0" layoutY="189.0" prefHeight="25.0" prefWidth="120.0" text="Adat3" />
+      <Label fx:id="fuelType" layoutX="162.0" layoutY="228.0" prefHeight="25.0" prefWidth="91.0" text="Adat4" />
+      <Label fx:id="carPower" layoutX="112.0" layoutY="271.0" prefHeight="17.0" prefWidth="120.0" text="Adat5" />
+      <Label fx:id="gearType" layoutX="163.0" layoutY="310.0" prefHeight="21.0" prefWidth="91.0" text="Adat6" />
+      <Label fx:id="color" layoutX="96.0" layoutY="346.0" prefHeight="21.0" prefWidth="120.0" text="Adat7" />
+      <Label fx:id="chassisType" layoutX="163.0" layoutY="381.0" prefHeight="20.0" prefWidth="80.0" text="Adat8" />
+      <Label fx:id="doors" layoutX="171.0" layoutY="418.0" prefHeight="25.0" prefWidth="91.0" text="Adat9" />
+      <Label fx:id="fuelEchonomy" layoutX="160.0" layoutY="463.0" prefHeight="21.0" prefWidth="91.0" text="Adat10" />
+      <Label fx:id="licence_plate" layoutX="149.0" layoutY="509.0" prefHeight="21.0" prefWidth="116.0" text="Adat11" />
       <ImageView fx:id="plusImageView" fitHeight="42.0" fitWidth="38.0" layoutX="339.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/plus.png" />
