@@ -32,7 +32,28 @@ public class CarDataListController implements Initializable {
     private ImageView brandingImageView;
     @FXML
     private ImageView calendarImageView;
-    @FXML ImageView carListImageView;
+    @FXML
+    private ImageView carListImageView1;
+    @FXML
+    private ImageView carListImageView2;
+    @FXML
+    private ImageView carListImageView3;
+    @FXML
+    private ImageView carListImageView4;
+    @FXML
+    private ImageView carListImageView5;
+    @FXML
+    private ImageView carListImageView6;
+    @FXML
+    private ImageView carListImageView7;
+    @FXML
+    private ImageView carListImageView8;
+    @FXML
+    private ImageView carListImageView9;
+    @FXML
+    private ImageView carListImageView10;
+    @FXML
+    private ImageView carListImageView11;
     @FXML
     private ImageView plusImageView;
     @FXML
@@ -107,31 +128,36 @@ public class CarDataListController implements Initializable {
     }
 
     public Cardata loadToPojo(String response) throws JsonProcessingException {
-        ObjectMapper objectMapper= new ObjectMapper();
-       return objectMapper.readValue(response,Cardata.class);
+        ObjectMapper objectMapper = new ObjectMapper();
+        return objectMapper.readValue(response, Cardata.class);
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         File brandingFile = new File("Images/TeAutodLogo.png");
-        File plusFile= new File("Images/plus.png");
-        File calendarImageFile=new File("Images/calendar.png");
+        File plusFile = new File("Images/plus.png");
+        File calendarImageFile = new File("Images/calendar.png");
         File carListImageFile = new File("Images/carList.png");
-
-
 
         Image brandingImage = new Image(brandingFile.toURI().toString());
         Image plusImageImage = new Image(plusFile.toURI().toString());
         Image calendarImage = new Image(calendarImageFile.toURI().toString());
         Image carListImage = new Image(carListImageFile.toURI().toString());
 
-
-
         brandingImageView.setImage(brandingImage);
         plusImageView.setImage(plusImageImage);
         calendarImageView.setImage(calendarImage);
-
-
+        carListImageView1.setImage(carListImage);
+        carListImageView2.setImage(carListImage);
+        carListImageView3.setImage(carListImage);
+        carListImageView4.setImage(carListImage);
+        carListImageView5.setImage(carListImage);
+        carListImageView6.setImage(carListImage);
+        carListImageView7.setImage(carListImage);
+        carListImageView8.setImage(carListImage);
+        carListImageView9.setImage(carListImage);
+        carListImageView10.setImage(carListImage);
+        carListImageView11.setImage(carListImage);
     }
 
     public void AddEventOnAction(ActionEvent event) throws IOException {

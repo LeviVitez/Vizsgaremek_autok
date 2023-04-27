@@ -37,57 +37,57 @@
       <Label layoutX="106.0" layoutY="440.0" text="Ajtók száma" />
       <Label layoutX="106.0" layoutY="482.0" text="Fogyasztás" />
       <Label layoutX="106.0" layoutY="524.0" text="Rendszám" />
-      <ImageView fx:id="carpic1" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView1" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carpic2" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView2" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carpic3" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView3" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="capic4" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView4" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carpic5" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView5" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carpic6" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView6" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="334.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carpic7" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView7" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carpic8" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView8" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carpic9" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView9" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carpic10" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView10" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="carpic11" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="carListImageView11" fitHeight="25.0" fitWidth="20.0" layoutX="67.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../Images/carList.png" />
          </image>
