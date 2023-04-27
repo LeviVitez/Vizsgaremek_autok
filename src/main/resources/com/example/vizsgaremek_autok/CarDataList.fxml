@@ -16,9 +16,9 @@
                   <Image url="@../../../../../../Images/TeAutodLogo.png" />
                </image>
             </ImageView>
-            <Label layoutX="100.0" layoutY="40.0" text="Az autód adatai">
+            <Label fx:id="givenameTextField" layoutX="93.0" layoutY="33.0" style="-fx-font-weight: bold;" text="Az autód adatai">
                <font>
-                  <Font size="13.0" />
+                  <Font size="20.0" />
                </font>
             </Label>
          </children>
@@ -108,7 +108,7 @@
             <Image url="@../../../../../../Images/plus.png" />
          </image>
       </ImageView>
-      <Button fx:id="AddEvent" layoutX="389.0" layoutY="506.0" mnemonicParsing="false" onAction="#AddEventOnAction" text="Esemény hozzáadása">
+      <Button fx:id="AddEvent" layoutX="389.0" layoutY="506.0" mnemonicParsing="false" onAction="#AddEventOnAction" style="-fx-background-color: black; -fx-font-weight: bold;" text="Esemény hozzáadása" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
@@ -133,6 +133,6 @@
             <Label layoutX="14.0" layoutY="138.0" text="test" />
          </children>
       </AnchorPane>
-      <Button fx:id="ExitButton" layoutX="419.0" layoutY="573.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="99.0" text="Kilépés" />
+      <Button fx:id="ExitButton" layoutX="419.0" layoutY="573.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: black; -fx-font-weight: bold;" text="Kilépés" textFill="WHITE" />
    </children>
 </AnchorPane>

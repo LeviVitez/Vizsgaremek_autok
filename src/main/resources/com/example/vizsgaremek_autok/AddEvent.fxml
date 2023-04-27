@@ -4,6 +4,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,7 +19,7 @@
                   <Image url="@../../../../../../Images/TeAutodLogo.png" />
                </image>
             </ImageView>
-            <Label layoutX="232.0" layoutY="20.0" prefHeight="35.0" prefWidth="137.0" text="Események" textAlignment="CENTER">
+            <Label layoutX="232.0" layoutY="20.0" prefHeight="35.0" prefWidth="137.0" style="-fx-font-weight: bold;" text="Események" textAlignment="CENTER">
                <font>
                   <Font size="24.0" />
                </font>
@@ -32,21 +33,36 @@
                   <Image url="@../../../../../../Images/addevent.png" />
                </image>
             </ImageView>
-            <Label layoutX="130.0" layoutY="311.0" prefHeight="20.0" prefWidth="188.0" text="Írja be az esemény dátumát:">
+            <Label layoutX="130.0" layoutY="311.0" prefHeight="20.0" prefWidth="188.0" style="-fx-font-weight: bold;" text="Írja be az esemény dátumát:">
                <font>
                   <Font size="14.0" />
                </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
             </Label>
-            <TextField layoutX="319.0" layoutY="309.0" promptText="2023.01.01 0:00" />
+            <TextField fx:id="DatumTextField" layoutX="319.0" layoutY="309.0" promptText="2023.01.01 0:00" />
+            <TextField fx:id="infoTextField" accessibleRoleDescription="n " layoutX="113.0" layoutY="238.0" prefHeight="60.0" prefWidth="355.0" promptText="pl: Műszaki Vizsga" />
+            <Label layoutX="113.0" layoutY="218.0" prefHeight="20.0" prefWidth="289.0" style="-fx-font-weight: bold;" text="írjon be egyéb információt az eseményről:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
+            <Label layoutX="104.0" layoutY="21.0" prefHeight="20.0" prefWidth="240.0" style="-fx-font-weight: bold;" text="Válassza ki a közelgó eseményeket:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow color="white" radius="2" spread="1" />
+               </effect>
+            </Label>
          </children>
       </AnchorPane>
-      <Label layoutX="112.0" layoutY="95.0" prefHeight="20.0" prefWidth="227.0" text="Válassza ki a közelgó eseményeket:">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Button layoutX="512.0" layoutY="429.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Hozzáad" />
-      <Button layoutX="14.0" layoutY="429.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Mégse" />
+      <Button layoutX="512.0" layoutY="429.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: black;" text="Hozzáad" textFill="WHITE" />
+      <Button fx:id="megseButton" layoutX="14.0" layoutY="429.0" mnemonicParsing="false" onAction="#megseOnButtonAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: black;" text="Mégse" textFill="WHITE" />
       <ComboBox fx:id="Events" layoutX="339.0" layoutY="93.0" prefWidth="150.0" promptText="Események" style="-fx-background-color: #ADD8E6;" visibleRowCount="12" />
    </children>
 </AnchorPane>

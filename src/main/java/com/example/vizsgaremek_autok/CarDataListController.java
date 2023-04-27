@@ -78,6 +78,8 @@ public class CarDataListController implements Initializable {
     private Label fuelEchonomy;
     @FXML
     private Label licence_plate;
+    @FXML
+    private Label givenameTextField;
     private LoginModell loginModell;
 
     public void setLoginModellForCarDataList(LoginModell loginModell) {
@@ -95,6 +97,7 @@ public class CarDataListController implements Initializable {
             doors.setText(String.valueOf(car.getDoors()));
             fuelEchonomy.setText(car.getFuelEconomy());
             licence_plate.setText(car.getLicense_plate());
+            givenameTextField.setText("A "+car.getGivenName()+" adatai:");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
