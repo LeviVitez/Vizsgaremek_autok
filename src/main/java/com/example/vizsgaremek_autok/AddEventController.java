@@ -40,6 +40,9 @@ public class AddEventController implements Initializable {
     private TextField StartTextField;
     private LoginModell loginModell;
 
+    public void setLoginModellForAddEventController(LoginModell loginModell) {
+        this.loginModell = loginModell;
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -51,11 +54,11 @@ public class AddEventController implements Initializable {
 
     public void EsemenyAddOnAction(ActionEvent event) throws IOException {
         AddEventDTO addEventDTO = new AddEventDTO((String) titleComboBox.getValue(), StartTextField.getText(), CommentTextField.getText());
-        int status = Unirest.post("http://localhost:3001/calendarEvent/9")//+ loginModell.getLogiResponse().getId())
+        int status = Unirest.post("http://localhost:3001/calendarEvent/" + loginModell.getLogiResponse().getId())
                 .header("Content-Type", "application/json")
                 .body(addEventDTO).asJson().getStatus();
-        //Stage stage = (Stage) EsemenyAddButton.getScene().getWindow();
-        //stage.close();
+        Stage stage = (Stage) EsemenyAddButton.getScene().getWindow();
+        stage.close();
     }
 
 

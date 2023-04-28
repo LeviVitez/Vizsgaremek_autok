@@ -171,12 +171,12 @@ public class CarDataListController implements Initializable {
     public void AddEventOnAction(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AddEvent.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 601, 468);
+        ((AddEventController) fxmlLoader.getController()).setLoginModellForAddEventController(loginModell);
         Stage stage2 = new Stage();
         stage2.setTitle("AddEvent");
         stage2.setScene(scene);
         stage2.show();
     }
-
     public void ExitButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) ExitButton.getScene().getWindow();
         stage.close();
