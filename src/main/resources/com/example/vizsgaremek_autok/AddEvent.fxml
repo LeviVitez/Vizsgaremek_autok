@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="468.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.AddEvent">
+<AnchorPane prefHeight="468.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.AddEventController">
    <children>
       <AnchorPane prefHeight="74.0" prefWidth="601.0" style="-fx-background-color: #F0FFFF;">
          <children>
@@ -41,8 +41,8 @@
                   <DropShadow color="white" radius="2" spread="1" />
                </effect>
             </Label>
-            <TextField fx:id="DatumTextField" layoutX="319.0" layoutY="309.0" promptText="2023.01.01 0:00" />
-            <TextField fx:id="infoTextField" accessibleRoleDescription="n " layoutX="113.0" layoutY="238.0" prefHeight="60.0" prefWidth="355.0" promptText="pl: Műszaki Vizsga" />
+            <TextField fx:id="StartTextField" layoutX="319.0" layoutY="309.0" promptText="2023.01.01 0:00" />
+            <TextField fx:id="CommentTextField" accessibleRoleDescription="n " layoutX="113.0" layoutY="238.0" prefHeight="60.0" prefWidth="355.0" promptText="pl: Műszaki Vizsga" />
             <Label layoutX="113.0" layoutY="218.0" prefHeight="20.0" prefWidth="289.0" style="-fx-font-weight: bold;" text="írjon be egyéb információt az eseményről:">
                <font>
                   <Font size="14.0" />
@@ -61,8 +61,8 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="512.0" layoutY="429.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: black;" text="Hozzáad" textFill="WHITE" />
+      <Button fx:id="EsemenyAddButton" layoutX="512.0" layoutY="429.0" mnemonicParsing="false" onAction="#EsemenyAddOnAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: black;" text="Hozzáad" textFill="WHITE" />
       <Button fx:id="megseButton" layoutX="14.0" layoutY="429.0" mnemonicParsing="false" onAction="#megseOnButtonAction" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: black;" text="Mégse" textFill="WHITE" />
-      <ComboBox fx:id="Events" layoutX="339.0" layoutY="93.0" prefWidth="150.0" promptText="Események" style="-fx-background-color: #ADD8E6;" visibleRowCount="12" />
+      <ComboBox fx:id="titleComboBox" layoutX="339.0" layoutY="93.0" prefWidth="150.0" promptText="Események" style="-fx-background-color: #ADD8E6;" visibleRowCount="12" />
    </children>
 </AnchorPane>
