@@ -7,6 +7,7 @@ module com.example.vizsgaremek_autok {
     requires com.fasterxml.jackson.annotation;
     requires com.fasterxml.jackson.databind;
     requires com.fasterxml.jackson.core;
+    requires java.desktop;
 
     opens com.example.vizsgaremek_autok;
 }

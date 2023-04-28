@@ -19,7 +19,10 @@ import kong.unirest.Unirest;
 import kong.unirest.json.JSONObject;
 
 import java.io.*;
+import java.awt.*;
 import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ResourceBundle;
 import java.net.URL;
 
@@ -66,7 +69,6 @@ public class LoginController implements Initializable {
         }
     }
 
-
     public void validateLogin() throws IOException {
         try {
             LoginDTO loginDTO = new LoginDTO(usernameTextField.getText(), enterpasswordField.getText());
@@ -83,7 +85,6 @@ public class LoginController implements Initializable {
                 loginMessageLabel.setText("Succesful Login!");
                 Stage stage = (Stage) loginButton.getScene().getWindow();
                 stage.close();
-
 
                 URL url = new URL("http://localhost:3001/userCar/" + userId);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -132,9 +133,11 @@ public class LoginController implements Initializable {
         }
     }
 
-
     public void ExitButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) ExitButton.getScene().getWindow();
         stage.close();
+    }
+    public void RegisterLinkOnAction(ActionEvent event) throws URISyntaxException,IOException{
+        Desktop.getDesktop().browse(new URI("http://localhost:3000/register"));
     }
 }

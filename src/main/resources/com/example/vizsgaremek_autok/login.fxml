@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.effect.DropShadow?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="1021.0" style="-fx-background-color: #F0FFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vizsgaremek_autok.LoginController">
    <right>
       <AnchorPane prefHeight="0.0" prefWidth="0.0" BorderPane.alignment="CENTER">
@@ -27,9 +28,18 @@
                         <Image url="@../../../../../../Images/TeAutodLogo.png" />
                      </image>
                   </ImageView>
-                  <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="431.0" layoutY="367.0" prefHeight="25.0" prefWidth="160.0" promptText="Username" style="-fx-background-color: #002b3e; -fx-border-color: white; -fx-text-inner-color: white;" />
-                  <PasswordField fx:id="enterpasswordField" alignment="CENTER" layoutX="431.0" layoutY="407.0" prefHeight="25.0" prefWidth="160.0" promptText="Password" style="-fx-background-color: #002b3e; -fx-border-color: white; -fx-text-inner-color: white;" />
-                  <Button fx:id="loginButton" layoutX="398.0" layoutY="467.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: black; -fx-font-weight: bold; -fx-border-color: white;" text="Login" textFill="WHITE">
+                  <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="431.0" layoutY="367.0" prefHeight="25.0" prefWidth="160.0" promptText="Felhasználónév" style="-fx-background-color: #002b3e; -fx-border-color: white; -fx-text-inner-color: white;" />
+                  <PasswordField fx:id="enterpasswordField" alignment="CENTER" layoutX="431.0" layoutY="407.0" prefHeight="25.0" prefWidth="160.0" promptText="Jelszó" style="-fx-background-color: #002b3e; -fx-border-color: white; -fx-text-inner-color: white;" />
+                  <Button fx:id="loginButton" layoutX="398.0" layoutY="467.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: black; -fx-font-weight: bold; -fx-border-color: white;" text="bejelentkezés" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="Link" alignment="CENTER" contentDisplay="CENTER" layoutX="398.0" layoutY="510.0" onAction="#RegisterLinkOnAction" pickOnBounds="false" prefHeight="32.0" prefWidth="225.0" style="-fx-background-color: black; -fx-border-color: white; -fx-font-weight: bold;" text="Regisztráció" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Hyperlink>
+                  <Button fx:id="ExitButton" layoutX="398.0" layoutY="553.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: black; -fx-font-weight: bold; -fx-border-color: white;" text="Kilépés" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -42,11 +52,6 @@
                         <DropShadow color="black" radius="4" spread="4" />
                      </effect>
                   </Label>
-                  <Button fx:id="ExitButton" layoutX="398.0" layoutY="509.0" mnemonicParsing="false" onAction="#ExitButtonOnAction" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: black; -fx-font-weight: bold; -fx-border-color: white;" text="Exit" textFill="WHITE">
-                     <font>
-                        <Font size="15.0" />
-                     </font>
-                  </Button>
                   <Label alignment="CENTER" layoutX="818.0" layoutY="667.0" prefHeight="51.0" prefWidth="203.0" style="-fx-font-weight: bold;" text="TeAutod.hu" textFill="WHITE">
                      <font>
                         <Font size="35.0" />
