@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf3f7a0d-a79c-4a27-b172-14c40fe9865a" name="Changes" comment="errorlabel implemented">
+    <list default="true" id="cf3f7a0d-a79c-4a27-b172-14c40fe9865a" name="Changes" comment="major login function implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/AddEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/AddEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682719193627</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="major login function implemented">
+      <created>1682721492672</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1682721492672</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,6 +260,7 @@
     <MESSAGE value="CarDataList Restyled" />
     <MESSAGE value="AddEvent fully working with logged in user id" />
     <MESSAGE value="errorlabel implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="errorlabel implemented" />
+    <MESSAGE value="major login function implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="major login function implemented" />
   </component>
 </project>

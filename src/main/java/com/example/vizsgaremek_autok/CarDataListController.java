@@ -125,7 +125,6 @@ public class CarDataListController implements Initializable {
             }
             bufferedReader.close();
             responseString = response.toString();
-            System.out.println(responseString);
         } else {
             responseString = "error";
         }

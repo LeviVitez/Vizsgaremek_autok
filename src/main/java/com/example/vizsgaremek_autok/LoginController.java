@@ -78,8 +78,6 @@ public class LoginController implements Initializable {
                 JSONObject responseBody = response.getBody().getObject();
                 userId = responseBody.getString("userId");
                 token = responseBody.getString("token");
-                System.out.println(userId);
-                System.out.println(token);
                 LogiResponse logiResponse = new LogiResponse(Integer.parseInt(userId), token);
                 loginModell = new LoginModell(logiResponse);
                 loginMessageLabel.setText("Succesful Login!");
@@ -100,7 +98,6 @@ public class LoginController implements Initializable {
                     }
                     bufferedReader.close();
                     responseString = response2.toString();
-                    System.out.println(responseString);
                 } else {
                     responseString = "error";
                 }
