@@ -38,6 +38,8 @@ public class AddEventController implements Initializable {
     private TextField CommentTextField;
     @FXML
     private TextField StartTextField;
+    @FXML
+    private Label ErrorLabel;
     private LoginModell loginModell;
 
     public void setLoginModellForAddEventController(LoginModell loginModell) {
@@ -53,14 +55,17 @@ public class AddEventController implements Initializable {
     }
 
     public void EsemenyAddOnAction(ActionEvent event) throws IOException {
-        AddEventDTO addEventDTO = new AddEventDTO((String) titleComboBox.getValue(), StartTextField.getText(), CommentTextField.getText());
-        int status = Unirest.post("http://localhost:3001/calendarEvent/" + loginModell.getLogiResponse().getId())
-                .header("Content-Type", "application/json")
-                .body(addEventDTO).asJson().getStatus();
-        Stage stage = (Stage) EsemenyAddButton.getScene().getWindow();
-        stage.close();
+        if (titleComboBox.getValue() != null && StartTextField.getText().isBlank() == false && CommentTextField.getText().isBlank() == false) {
+            AddEventDTO addEventDTO = new AddEventDTO((String) titleComboBox.getValue(), StartTextField.getText(), CommentTextField.getText());
+            int status = Unirest.post("http://localhost:3001/calendarEvent/" + loginModell.getLogiResponse().getId())
+                    .header("Content-Type", "application/json")
+                    .body(addEventDTO).asJson().getStatus();
+            Stage stage = (Stage) EsemenyAddButton.getScene().getWindow();
+            stage.close();
+        } else {
+            ErrorLabel.setText("Kérjük töltse ki az összes mezőt!");
+        }
     }
-
 
     public void megseOnButtonAction(ActionEvent event) throws IOException {
         Stage stage = (Stage) megseButton.getScene().getWindow();
