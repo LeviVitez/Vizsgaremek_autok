@@ -31,8 +31,6 @@ public class AddEventController implements Initializable {
     @FXML
     private Button EsemenyAddButton;
     @FXML
-    private ComboBox<String> Events;
-    @FXML
     private ComboBox titleComboBox;
     @FXML
     private TextField CommentTextField;
