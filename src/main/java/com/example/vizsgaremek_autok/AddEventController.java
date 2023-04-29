@@ -14,6 +14,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import kong.unirest.HttpResponse;
+import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
 
 import java.io.Console;
@@ -31,14 +33,17 @@ public class AddEventController implements Initializable {
     @FXML
     private Button EsemenyAddButton;
     @FXML
-    private ComboBox titleComboBox;
+    private ComboBox<String> titleComboBox;
     @FXML
-    private TextField CommentTextField;
+    private TextField commentTextField;
     @FXML
     private TextField StartTextField;
     @FXML
     private Label ErrorLabel;
     private LoginModell loginModell;
+    private static String titleStatic;
+    private static String commentStatic;
+    private static String startStatic;
 
     public void setLoginModellForAddEventController(LoginModell loginModell) {
         this.loginModell = loginModell;
@@ -53,20 +58,41 @@ public class AddEventController implements Initializable {
     }
 
     public void EsemenyAddOnAction(ActionEvent event) throws IOException {
-        if (titleComboBox.getValue() != null && StartTextField.getText().isBlank() == false && CommentTextField.getText().isBlank() == false) {
-            AddEventDTO addEventDTO = new AddEventDTO((String) titleComboBox.getValue(), StartTextField.getText(), CommentTextField.getText());
-            int status = Unirest.post("http://localhost:3001/calendarEvent/" + loginModell.getLogiResponse().getId())
-                    .header("Content-Type", "application/json")
-                    .body(addEventDTO).asJson().getStatus();
-            Stage stage = (Stage) EsemenyAddButton.getScene().getWindow();
-            stage.close();
+        if (titleComboBox.getValue() != null && StartTextField.getText().isBlank() == false && commentTextField.getText().isBlank() == false) {
+            int statusCode = sendEventRequest();
+            if (statusCode == 201){
+                titleStatic = titleComboBox.getValue();
+                commentStatic = commentTextField.getText().trim();
+                startStatic = StartTextField.getText().trim();
+                Stage stage = (Stage) EsemenyAddButton.getScene().getWindow();
+                stage.close();
+            }else {
+
+            }
         } else {
             ErrorLabel.setText("Kérjük töltse ki az összes mezőt!");
         }
+    }
+
+    public int sendEventRequest(){
+        String requstString = String.format("""
+                    {
+                      "calid": null,
+                      "title": "%s",
+                      "start": "%s",
+                    "comment": "%s",
+                      "carData": null
+                    }""",titleComboBox.getValue(),StartTextField.getText().trim(),commentTextField.getText().trim());
+
+
+         return Unirest.post("http://localhost:3001/calendarEvent/"+loginModell.getLogiResponse().getId())
+                .header("Content-Type", "application/json")
+                .body(requstString).asJson().getStatus();
     }
 
     public void megseOnButtonAction(ActionEvent event) throws IOException {
         Stage stage = (Stage) megseButton.getScene().getWindow();
         stage.close();
     }
+
 }
