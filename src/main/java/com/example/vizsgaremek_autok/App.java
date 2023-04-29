@@ -12,6 +12,7 @@ public class App extends Application {
 
         Scene scene = new Scene(fxmlLoader.load(), 1021, 728);
         stage.initStyle(StageStyle.UNDECORATED);
+        stage.setTitle("TeAutód.hu");
         stage.setScene(scene);
         stage.show();
     }

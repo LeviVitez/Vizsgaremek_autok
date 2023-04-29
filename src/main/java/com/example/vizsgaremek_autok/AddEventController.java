@@ -7,20 +7,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import kong.unirest.Unirest;
 
-import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.io.IOException;
 
 
 public class AddEventController implements Initializable {
-    @FXML
-    private ImageView AddeventImageView;
     @FXML
     private Button megseButton;
     @FXML
@@ -51,7 +46,7 @@ public class AddEventController implements Initializable {
     public void EsemenyAddOnAction(ActionEvent event) throws IOException {
         if (titleComboBox.getValue() != null && StartTextField.getText().isBlank() == false && commentTextField.getText().isBlank() == false) {
             int statusCode = sendEventRequest();
-            if (statusCode == 200){
+            if (statusCode == 200) {
                 titleStatic = titleComboBox.getValue();
                 commentStatic = commentTextField.getText().trim();
                 startStatic = StartTextField.getText().trim();
@@ -59,7 +54,7 @@ public class AddEventController implements Initializable {
                 carDataListController.loadEventsToList();
                 stage.close();
                 carDataListController.setButtonsEnabled();
-            }else {
+            } else {
 
             }
         } else {
@@ -67,18 +62,18 @@ public class AddEventController implements Initializable {
         }
     }
 
-    public int sendEventRequest(){
+    public int sendEventRequest() {
         String requstString = String.format("""
-                    {
-                      "calid": null,
-                      "title": "%s",
-                      "start": "%s",
-                    "comment": "%s",
-                      "carData": null
-                    }""",titleComboBox.getValue(),StartTextField.getText().trim(),commentTextField.getText().trim());
+                {
+                  "calid": null,
+                  "title": "%s",
+                  "start": "%s",
+                "comment": "%s",
+                  "carData": null
+                }""", titleComboBox.getValue(), StartTextField.getText().trim(), commentTextField.getText().trim());
 
 
-         return Unirest.post("http://localhost:3001/calendarEvent/"+loginModell.getLogiResponse().getId())
+        return Unirest.post("http://localhost:3001/calendarEvent/" + loginModell.getLogiResponse().getId())
                 .header("Content-Type", "application/json")
                 .body(requstString).asJson().getStatus();
     }

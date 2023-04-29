@@ -2,14 +2,11 @@ package com.example.vizsgaremek_autok;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.stage.StageStyle;
@@ -23,7 +20,6 @@ import java.awt.*;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ResourceBundle;
 import java.net.URL;
 
 public class LoginController {
@@ -31,10 +27,6 @@ public class LoginController {
     private Button ExitButton;
     @FXML
     private Label loginMessageLabel;
-    @FXML
-    private ImageView brandingImageView;
-    @FXML
-    private ImageView supraImageView;
     @FXML
     private TextField usernameTextField;
     @FXML
@@ -45,9 +37,6 @@ public class LoginController {
     public String token;
     public String responseString;
     private LoginModell loginModell;
-
-
-
 
     public void loginButtonOnAction(ActionEvent event) throws IOException {
         if (usernameTextField.getText().isBlank() == false && enterpasswordField.getText().isBlank() == false) {
@@ -98,7 +87,7 @@ public class LoginController {
                     Scene scene = new Scene(fxmlLoader.load(), 1079, 898);
                     Stage stage2 = new Stage();
                     stage2.initStyle(StageStyle.UNDECORATED);
-                    stage2.setTitle("Logged In");
+                    stage2.setTitle("TeAutód.hu");
                     stage2.setScene(scene);
                     ((CarDataController) fxmlLoader.getController()).setLoginForCarData(loginModell);
                     stage2.show();
@@ -107,6 +96,7 @@ public class LoginController {
                     FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("CarDataList.fxml"));
                     Scene scene = new Scene(fxmlLoader.load(), 612, 650);
                     Stage stage3 = new Stage();
+                    stage3.setTitle("TeAutód.hu");
                     stage3.initStyle(StageStyle.UNDECORATED);
                     ((CarDataListController) fxmlLoader.getController()).setLoginModellForCarDataList(loginModell);
                     stage3.setScene(scene);
@@ -125,7 +115,8 @@ public class LoginController {
         Stage stage = (Stage) ExitButton.getScene().getWindow();
         stage.close();
     }
-    public void RegisterLinkOnAction(ActionEvent event) throws URISyntaxException,IOException{
+
+    public void RegisterLinkOnAction(ActionEvent event) throws URISyntaxException, IOException {
         Desktop.getDesktop().browse(new URI("http://localhost:3000/register"));
     }
 }

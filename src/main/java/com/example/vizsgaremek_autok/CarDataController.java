@@ -4,20 +4,14 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import kong.unirest.Unirest;
 
-import java.io.File;
-import java.net.URL;
-import java.util.ResourceBundle;
 import java.io.IOException;
 
 public class CarDataController {
@@ -48,17 +42,10 @@ public class CarDataController {
     @FXML
     private Button ExitBut;
     @FXML
-    private ImageView brandingImageView;
-    @FXML
-    private ImageView addEventImageView;
-    @FXML
     private Label successfulUploadLabel;
     @FXML
     private Button UploadBut;
     private LoginModell loginModell;
-    @FXML
-    private Button AddEvent;
-
 
 
     public void UploadButtonOnAction(ActionEvent event) throws IOException {
@@ -68,8 +55,8 @@ public class CarDataController {
 
         CarDataDTO carDataDTO = new CarDataDTO(CarNameLabel.getText(), CarBrandLabel.getText(), ModelLabel.getText(),
                 modelYear, FuelLabel.getText(), carPower, GearTypeLabel.getText(),
-                ColorLabel.getText(),ChassiTypeLabel.getText(), doors,FuelEconomyLabel.getText(), LicencePlateLabel.getText());
-        int status = Unirest.post("http://localhost:3001/car/"+loginModell.getLogiResponse().getId())
+                ColorLabel.getText(), ChassiTypeLabel.getText(), doors, FuelEconomyLabel.getText(), LicencePlateLabel.getText());
+        int status = Unirest.post("http://localhost:3001/car/" + loginModell.getLogiResponse().getId())
                 .header("Content-Type", "application/json")
                 .body(carDataDTO).asJson().getStatus();
         successfulUploadLabel.setText("Autó feltőltése sikeres!");
@@ -80,6 +67,7 @@ public class CarDataController {
         Scene scene = new Scene(fxmlLoader.load(), 612, 650);
         Stage stage3 = new Stage();
         stage3.initStyle(StageStyle.UNDECORATED);
+        stage3.setTitle("TeAutód.hu");
         ((CarDataListController) fxmlLoader.getController()).setLoginModellForCarDataList(loginModell);
         stage3.setScene(scene);
         stage3.show();
@@ -92,8 +80,7 @@ public class CarDataController {
     }
 
 
-
-    public void setLoginForCarData(LoginModell loginModell){
+    public void setLoginForCarData(LoginModell loginModell) {
         this.loginModell = loginModell;
     }
 

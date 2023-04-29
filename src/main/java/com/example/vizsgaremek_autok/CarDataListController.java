@@ -1,5 +1,4 @@
 package com.example.vizsgaremek_autok;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,12 +12,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import kong.unirest.Unirest;
-
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -32,36 +29,6 @@ public class CarDataListController implements Initializable {
     private Button ExitButton;
     @FXML
     private Button AddEvent;
-    @FXML
-    private ImageView brandingImageView;
-    @FXML
-    private ImageView calendarImageView;
-    @FXML
-    private ImageView carListImageView1;
-    @FXML
-    private ImageView carListImageView2;
-    @FXML
-    private ImageView carListImageView3;
-    @FXML
-    private ImageView carListImageView4;
-    @FXML
-    private ImageView carListImageView5;
-    @FXML
-    private ImageView carListImageView6;
-    @FXML
-    private ImageView carListImageView7;
-    @FXML
-    private ImageView carListImageView8;
-    @FXML
-    private ImageView carListImageView9;
-    @FXML
-    private ImageView carListImageView10;
-    @FXML
-    private ImageView carListImageView11;
-    @FXML
-    private ImageView plusImageView;
-    @FXML
-    private ImageView carDataListImageView;
     @FXML
     private Label brand;
     @FXML
@@ -90,45 +57,38 @@ public class CarDataListController implements Initializable {
     private VBox eventListVbox;
     @FXML
     private ListView<EventResponse> eventListView;
-
     private LoginModell loginModell;
     private static String titleStatic;
     private static String commentStatic;
     private static String startStatic;
     private List<EventResponse> events;
 
+    public String sendGetEventRequset() throws IOException {
+        URL url = new URL("http://localhost:3001/calendarEvent/" + loginModell.getLogiResponse().getId());
+        HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+        httpURLConnection.setRequestMethod("GET");
+        String responseString = "";
 
-
-
-
-public String sendGetEventRequset() throws IOException {
-    URL url = new URL("http://localhost:3001/calendarEvent/" + loginModell.getLogiResponse().getId());
-
-    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-
-    httpURLConnection.setRequestMethod("GET");
-
-    String responseString = "";
-
-    if (httpURLConnection.getResponseCode() == 200) {
-
-        InputStream inputStream = httpURLConnection.getInputStream();
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-        StringBuilder response = new StringBuilder();
-        String line;
-        while ((line = bufferedReader.readLine()) != null) {
-            response.append(line);
+        if (httpURLConnection.getResponseCode() == 200) {
+            InputStream inputStream = httpURLConnection.getInputStream();
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+            StringBuilder response = new StringBuilder();
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                response.append(line);
+            }
+            bufferedReader.close();
+            responseString = response.toString();
+        } else {
+            responseString = "error";
         }
-        bufferedReader.close();
-        responseString = response.toString();
-    } else {
-        responseString = "error";
+        return responseString;
     }
-    return responseString;
-}
+
     public CalData loadToEventPojo(String response) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.readValue(response, new TypeReference<>(){});
+        return objectMapper.readValue(response, new TypeReference<>() {
+        });
     }
 
     public void setLoginModellForCarDataList(LoginModell loginModell) {
@@ -146,7 +106,7 @@ public String sendGetEventRequset() throws IOException {
             doors.setText(String.valueOf(car.getDoors()));
             fuelEchonomy.setText(car.getFuelEconomy());
             licence_plate.setText(car.getLicense_plate());
-            givenameTextField.setText("A "+car.getGivenName()+" adatai:");
+            givenameTextField.setText("A " + car.getGivenName() + " adatai:");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -154,15 +114,11 @@ public String sendGetEventRequset() throws IOException {
 
     public String carLoad() throws IOException {
         URL url = new URL("http://localhost:3001/userCar/" + loginModell.getLogiResponse().getId());
-
         HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-
         httpURLConnection.setRequestMethod("GET");
-
         String responseString = "";
 
         if (httpURLConnection.getResponseCode() == 200) {
-
             InputStream inputStream = httpURLConnection.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
             StringBuilder response = new StringBuilder();
@@ -185,10 +141,7 @@ public String sendGetEventRequset() throws IOException {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-
-      loadEventsToList();
-
+        loadEventsToList();
         eventListView.setCellFactory(param -> new ListCell<EventResponse>() {
             @Override
             protected void updateItem(EventResponse item, boolean empty) {
@@ -203,8 +156,8 @@ public String sendGetEventRequset() throws IOException {
         });
     }
 
-    public void loadEventsToList(){
-        Platform.runLater(()->{
+    public void loadEventsToList() {
+        Platform.runLater(() -> {
             try {
                 events = (loadToEventPojo(sendGetEventRequset())).getEventResponses();
                 eventListView.getItems().clear();
@@ -220,14 +173,15 @@ public String sendGetEventRequset() throws IOException {
         Scene scene = new Scene(fxmlLoader.load(), 601, 468);
         ((AddEventController) fxmlLoader.getController()).setLoginModellForAddEventController(loginModell);
         Stage stage2 = new Stage();
-        stage2.setTitle("AddEvent");
+        stage2.initStyle(StageStyle.UNDECORATED);
+        stage2.setTitle("TeAutód.hu");
         stage2.setScene(scene);
-        stage2.setOnShown(eventt->{
+        stage2.setOnShown(eventt -> {
             AddEvent.setDisable(true);
             ExitButton.setDisable(true);
             deleteEvent.setDisable(true);
         });
-        stage2.setOnCloseRequest(eventt->{
+        stage2.setOnCloseRequest(eventt -> {
             AddEvent.setDisable(false);
             ExitButton.setDisable(false);
             deleteEvent.setDisable(false);
@@ -236,13 +190,12 @@ public String sendGetEventRequset() throws IOException {
         AddEventController addEventController = fxmlLoader.getController();
         addEventController.setCarDataListController(this);
         stage2.show();
-
     }
 
-    public void setButtonsEnabled(){
-    AddEvent.setDisable(false);
-    ExitButton.setDisable(false);
-    deleteEvent.setDisable(false);
+    public void setButtonsEnabled() {
+        AddEvent.setDisable(false);
+        ExitButton.setDisable(false);
+        deleteEvent.setDisable(false);
     }
 
     public void ExitButtonOnAction(ActionEvent event) {
@@ -251,17 +204,14 @@ public String sendGetEventRequset() throws IOException {
     }
 
     public void DeleteEventOnAction(ActionEvent event) {
-        if (eventListView.getSelectionModel().isEmpty()){
+        if (eventListView.getSelectionModel().isEmpty()) {
             return;
         }
-        int statusCode = Unirest.delete("http://localhost:3001/calendarEvent/"+eventListView.getSelectionModel().getSelectedItem().getCalId())
+        int statusCode = Unirest.delete("http://localhost:3001/calendarEvent/" + eventListView.getSelectionModel().getSelectedItem().getCalId())
                 .header("Content-Type", "application/json").asJson().getStatus();
         if (statusCode == 200) {
             loadEventsToList();
-        }else {
-
         }
-
     }
 }
 
