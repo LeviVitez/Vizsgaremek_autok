@@ -16,17 +16,17 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class CarDataListController implements Initializable {
+    @FXML
+    public Button deleteEvent;
     @FXML
     private Button ExitButton;
     @FXML
@@ -95,6 +95,8 @@ public class CarDataListController implements Initializable {
     private static String commentStatic;
     private static String startStatic;
     private List<EventResponse> events;
+
+
 
 
 
@@ -207,6 +209,11 @@ public String sendGetEventRequset() throws IOException {
         carListImageView11.setImage(carListImage);
         carDataListImageView.setImage(carDataListImage);
 
+
+      loadEventsToList();
+    }
+
+    public void loadEventsToList(){
         Platform.runLater(()->{
             try {
                 events = (loadToEventPojo(sendGetEventRequset())).getEventResponses();
@@ -233,11 +240,35 @@ public String sendGetEventRequset() throws IOException {
         Stage stage2 = new Stage();
         stage2.setTitle("AddEvent");
         stage2.setScene(scene);
+        stage2.setOnShown(eventt->{
+            AddEvent.setDisable(true);
+            ExitButton.setDisable(true);
+            deleteEvent.setDisable(true);
+        });
+        stage2.setOnCloseRequest(eventt->{
+            AddEvent.setDisable(false);
+            ExitButton.setDisable(false);
+            deleteEvent.setDisable(false);
+            loadEventsToList();
+        });
+        AddEventController addEventController = fxmlLoader.getController();
+        addEventController.setCarDataListController(this);
         stage2.show();
+
     }
+
+    public void setButtonsEnabled(){
+    AddEvent.setDisable(false);
+    ExitButton.setDisable(false);
+    deleteEvent.setDisable(false);
+    }
+
     public void ExitButtonOnAction(ActionEvent event) {
         Stage stage = (Stage) ExitButton.getScene().getWindow();
         stage.close();
+    }
+
+    public void DeleteEventOnAction(ActionEvent event) {
     }
 }
 
