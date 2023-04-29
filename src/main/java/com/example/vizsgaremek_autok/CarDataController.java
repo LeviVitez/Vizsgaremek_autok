@@ -86,7 +86,7 @@ public class CarDataController implements Initializable {
         Stage stage = (Stage) UploadBut.getScene().getWindow();
         stage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarDataList.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 604, 622);
+        Scene scene = new Scene(fxmlLoader.load(), 612, 650);
         Stage stage3 = new Stage();
         stage3.initStyle(StageStyle.UNDECORATED);
         ((CarDataListController) fxmlLoader.getController()).setLoginModellForCarDataList(loginModell);

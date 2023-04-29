@@ -139,19 +139,16 @@ public class CarDataListController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         File brandingFile = new File("Images/TeAutodLogo.png");
-        File plusFile = new File("Images/plus.png");
         File calendarImageFile = new File("Images/calendar.png");
         File carListImageFile = new File("Images/carList.png");
         File cardatalistfile=new File("Images/CarDataList.png");
 
         Image brandingImage = new Image(brandingFile.toURI().toString());
-        Image plusImageImage = new Image(plusFile.toURI().toString());
         Image calendarImage = new Image(calendarImageFile.toURI().toString());
         Image carListImage = new Image(carListImageFile.toURI().toString());
         Image carDataListImage=new Image(cardatalistfile.toURI().toString());
 
         brandingImageView.setImage(brandingImage);
-        plusImageView.setImage(plusImageImage);
         calendarImageView.setImage(calendarImage);
         carListImageView1.setImage(carListImage);
         carListImageView2.setImage(carListImage);
