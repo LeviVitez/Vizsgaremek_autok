@@ -18,14 +18,14 @@
          <children>
             <ImageView fx:id="supraImageView" fitHeight="1069.0" fitWidth="1021.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Images/supra.png" />
+                  <Image url="@Images/supra.png" />
                </image>
             </ImageView>
             <AnchorPane prefHeight="718.0" prefWidth="1021.0">
                <children>
                   <ImageView fx:id="brandingImageView" fitHeight="103.0" fitWidth="130.0" layoutX="855.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../Images/TeAutodLogo.png" />
+                        <Image url="@Images/TeAutodLogo.png" />
                      </image>
                   </ImageView>
                   <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="431.0" layoutY="367.0" prefHeight="25.0" prefWidth="160.0" promptText="Felhasználónév" style="-fx-background-color: #002b3e; -fx-border-color: white; -fx-text-inner-color: white;" />

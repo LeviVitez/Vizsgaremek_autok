@@ -15,13 +15,12 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import kong.unirest.Unirest;
 
-import java.io.Console;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.io.IOException;
 
-public class CarDataController implements Initializable {
+public class CarDataController {
     @FXML
     private TextField CarNameLabel;
     @FXML
@@ -60,15 +59,7 @@ public class CarDataController implements Initializable {
     @FXML
     private Button AddEvent;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        File brandingFile = new File("Images/TeAutodLogo.png");
-        File addeventfile=new File("Images/cardatadone.png");
-        Image brandingImage = new Image(brandingFile.toURI().toString());
-        Image addeventfileimage=new Image(addeventfile.toURI().toString());
-        brandingImageView.setImage(brandingImage);
-        addEventImageView.setImage(addeventfileimage);
-    }
+
 
     public void UploadButtonOnAction(ActionEvent event) throws IOException {
         int modelYear = Integer.parseInt(ModelYearLabel.getText());
@@ -85,7 +76,7 @@ public class CarDataController implements Initializable {
 
         Stage stage = (Stage) UploadBut.getScene().getWindow();
         stage.close();
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarDataList.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("CarDataList.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 612, 650);
         Stage stage3 = new Stage();
         stage3.initStyle(StageStyle.UNDECORATED);

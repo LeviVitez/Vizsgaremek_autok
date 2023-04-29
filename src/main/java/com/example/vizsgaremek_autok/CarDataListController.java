@@ -22,8 +22,6 @@ import kong.unirest.Unirest;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -187,30 +185,6 @@ public String sendGetEventRequset() throws IOException {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File brandingFile = new File("Images/TeAutodLogo.png");
-        File calendarImageFile = new File("Images/calendar.png");
-        File carListImageFile = new File("Images/carList.png");
-        File cardatalistfile=new File("Images/CarDataList.png");
-
-        Image brandingImage = new Image(brandingFile.toURI().toString());
-        Image calendarImage = new Image(calendarImageFile.toURI().toString());
-        Image carListImage = new Image(carListImageFile.toURI().toString());
-        Image carDataListImage=new Image(cardatalistfile.toURI().toString());
-
-        brandingImageView.setImage(brandingImage);
-        calendarImageView.setImage(calendarImage);
-        carListImageView1.setImage(carListImage);
-        carListImageView2.setImage(carListImage);
-        carListImageView3.setImage(carListImage);
-        carListImageView4.setImage(carListImage);
-        carListImageView5.setImage(carListImage);
-        carListImageView6.setImage(carListImage);
-        carListImageView7.setImage(carListImage);
-        carListImageView8.setImage(carListImage);
-        carListImageView9.setImage(carListImage);
-        carListImageView10.setImage(carListImage);
-        carListImageView11.setImage(carListImage);
-        carDataListImageView.setImage(carDataListImage);
 
 
       loadEventsToList();
@@ -242,7 +216,7 @@ public String sendGetEventRequset() throws IOException {
     }
 
     public void AddEventOnAction(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("AddEvent.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("AddEvent.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 601, 468);
         ((AddEventController) fxmlLoader.getController()).setLoginModellForAddEventController(loginModell);
         Stage stage2 = new Stage();

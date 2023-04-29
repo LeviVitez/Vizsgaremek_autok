@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf3f7a0d-a79c-4a27-b172-14c40fe9865a" name="Changes" comment="styling changes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/CarDataList.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/Images/CarDataList.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/TeAutodLogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/Images/TeAutodLogo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/addevent.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/Images/addevent.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/calendar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/Images/calendar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/carList.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/Images/carList.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/cardatadone.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/Images/cardatadone.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/supra.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/Images/supra.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/AddEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/AddEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/ListView.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/ListView.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/AddEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/AddEvent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/CarData.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/CarData.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/CarDataList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/CarDataList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +77,24 @@
       <recent name="C:\Users\LeviVitez\Downloads\Vizsgaremek_autok\Images" />
       <recent name="C:\szar2\Images" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\szar4\src\main\resources\com\example\vizsgaremek_autok" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.vizsgaremek_autok.App" />
+      <module name="Vizsgaremek_autok" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.vizsgaremek_autok.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.vizsgaremek_autok.Main" />
       <module name="Vizsgaremek_autok" />
@@ -77,8 +108,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Vizsgaremek_autok [package]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Maven.Vizsgaremek_autok [package]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -344,7 +405,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682781967567</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Events delete are working">
+      <created>1682785317509</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1682785317509</updated>
+    </task>
+    <task id="LOCAL-00038" summary="styling changes">
+      <created>1682785469947</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1682785469947</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -360,7 +435,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="CarData ReStyled" />
     <MESSAGE value="cleaning up code" />
     <MESSAGE value="styling car datalist" />
     <MESSAGE value="small styling touches" />
@@ -384,6 +458,7 @@
     <MESSAGE value="reaching controller from a nother controller" />
     <MESSAGE value="styleing" />
     <MESSAGE value="deletebutton added and bug fixes" />
+    <MESSAGE value="Events delete are working" />
     <MESSAGE value="styling changes" />
     <option name="LAST_COMMIT_MESSAGE" value="styling changes" />
   </component>

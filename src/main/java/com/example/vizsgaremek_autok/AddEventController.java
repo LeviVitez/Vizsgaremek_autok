@@ -45,9 +45,6 @@ public class AddEventController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File addeventfile = new File("Images/addevent.png");
-        Image addeventimage = new Image(addeventfile.toURI().toString());
-        AddeventImageView.setImage(addeventimage);
         titleComboBox.getItems().addAll("Tankolás", "Büntetés", "Biztosítás", "Szervíz", "Műszaki vizsga", "Havi szemle", "Pályamatrica", "Gépjárműadó", "Parkolás", "Autómosás", "Befizetés", "Egyéb");
     }
 

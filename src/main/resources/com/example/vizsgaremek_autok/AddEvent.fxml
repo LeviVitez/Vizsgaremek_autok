@@ -16,7 +16,7 @@
          <children>
             <ImageView fitHeight="47.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Images/TeAutodLogo.png" />
+                  <Image url="@Images/TeAutodLogo.png" />
                </image>
             </ImageView>
             <Label layoutX="232.0" layoutY="20.0" prefHeight="35.0" prefWidth="137.0" style="-fx-font-weight: bold;" text="Események" textAlignment="CENTER">
@@ -30,7 +30,7 @@
          <children>
             <ImageView fx:id="AddeventImageView" fitHeight="393.0" fitWidth="601.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Images/addevent.png" />
+                  <Image url="@Images/addevent.png" />
                </image>
             </ImageView>
             <Label layoutX="130.0" layoutY="311.0" prefHeight="20.0" prefWidth="188.0" style="-fx-font-weight: bold;" text="Írja be az esemény dátumát:">

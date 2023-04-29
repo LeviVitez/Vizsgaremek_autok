@@ -26,7 +26,7 @@ import java.net.URISyntaxException;
 import java.util.ResourceBundle;
 import java.net.URL;
 
-public class LoginController implements Initializable {
+public class LoginController {
     @FXML
     private Button ExitButton;
     @FXML
@@ -47,19 +47,7 @@ public class LoginController implements Initializable {
     private LoginModell loginModell;
 
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        File brandingFile = new File("Images/TeAutodLogo.png");
-        File suprafile = new File("Images/supra.png");
 
-        Image brandingImage = new Image(brandingFile.toURI().toString());
-        Image supraImage = new Image(suprafile.toURI().toString());
-
-        brandingImageView.setImage(brandingImage);
-        supraImageView.setImage(supraImage);
-
-
-    }
 
     public void loginButtonOnAction(ActionEvent event) throws IOException {
         if (usernameTextField.getText().isBlank() == false && enterpasswordField.getText().isBlank() == false) {
@@ -106,7 +94,7 @@ public class LoginController implements Initializable {
                 //ha van auto akkor egybol az adatait mutatja, ha nincs felkell venni
                 if (responseString.length() == 13) {
                     //ez azert 13 mert a {"cars":null} 13 betű
-                    FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarData.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("CarData.fxml"));
                     Scene scene = new Scene(fxmlLoader.load(), 1079, 898);
                     Stage stage2 = new Stage();
                     stage2.initStyle(StageStyle.UNDECORATED);
@@ -116,7 +104,7 @@ public class LoginController implements Initializable {
                     stage2.show();
                 } else {
                     stage.close();
-                    FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("CarDataList.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("CarDataList.fxml"));
                     Scene scene = new Scene(fxmlLoader.load(), 612, 650);
                     Stage stage3 = new Stage();
                     stage3.initStyle(StageStyle.UNDECORATED);
