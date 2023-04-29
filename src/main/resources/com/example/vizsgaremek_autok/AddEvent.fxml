@@ -42,7 +42,7 @@
                </effect>
             </Label>
             <ComboBox fx:id="titleComboBox" layoutX="344.0" layoutY="19.0" prefWidth="150.0" promptText="Válasszon!" style="-fx-background-color: #ADD8E6;" visibleRowCount="12" />
-            <TextField fx:id="CommentTextField" accessibleRoleDescription="n " layoutX="113.0" layoutY="238.0" prefHeight="60.0" prefWidth="377.0" promptText="pl: Műszaki Vizsga" />
+            <TextField fx:id="commentTextField" accessibleRoleDescription="n " layoutX="113.0" layoutY="238.0" prefHeight="60.0" prefWidth="377.0" promptText="pl: Műszaki Vizsga" />
             <TextField fx:id="StartTextField" layoutX="319.0" layoutY="309.0" prefHeight="25.0" prefWidth="170.0" promptText="2023. 01. 01." />
             <Label layoutX="113.0" layoutY="218.0" prefHeight="20.0" prefWidth="289.0" style="-fx-font-weight: bold;" text="írjon be egyéb információt az eseményről:">
                <font>
