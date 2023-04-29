@@ -30,7 +30,7 @@
                   </ImageView>
                   <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="431.0" layoutY="367.0" prefHeight="25.0" prefWidth="160.0" promptText="Felhasználónév" style="-fx-background-color: #002b3e; -fx-border-color: white; -fx-text-inner-color: white;" />
                   <PasswordField fx:id="enterpasswordField" alignment="CENTER" layoutX="431.0" layoutY="407.0" prefHeight="25.0" prefWidth="160.0" promptText="Jelszó" style="-fx-background-color: #002b3e; -fx-border-color: white; -fx-text-inner-color: white;" />
-                  <Button fx:id="loginButton" layoutX="398.0" layoutY="467.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: black; -fx-font-weight: bold; -fx-border-color: white;" text="bejelentkezés" textFill="WHITE">
+                  <Button fx:id="loginButton" layoutX="398.0" layoutY="467.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: black; -fx-font-weight: bold; -fx-border-color: white;" text="Bejelentkezés" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
