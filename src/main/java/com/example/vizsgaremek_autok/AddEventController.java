@@ -1,11 +1,8 @@
 package com.example.vizsgaremek_autok;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -13,12 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import kong.unirest.HttpResponse;
-import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
 
-import java.io.Console;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -44,6 +37,7 @@ public class AddEventController implements Initializable {
     private static String titleStatic;
     private static String commentStatic;
     private static String startStatic;
+    private CarDataListController carDataListController;
 
     public void setLoginModellForAddEventController(LoginModell loginModell) {
         this.loginModell = loginModell;
@@ -60,12 +54,14 @@ public class AddEventController implements Initializable {
     public void EsemenyAddOnAction(ActionEvent event) throws IOException {
         if (titleComboBox.getValue() != null && StartTextField.getText().isBlank() == false && commentTextField.getText().isBlank() == false) {
             int statusCode = sendEventRequest();
-            if (statusCode == 201){
+            if (statusCode == 200){
                 titleStatic = titleComboBox.getValue();
                 commentStatic = commentTextField.getText().trim();
                 startStatic = StartTextField.getText().trim();
                 Stage stage = (Stage) EsemenyAddButton.getScene().getWindow();
+                carDataListController.loadEventsToList();
                 stage.close();
+                carDataListController.setButtonsEnabled();
             }else {
 
             }
@@ -93,6 +89,11 @@ public class AddEventController implements Initializable {
     public void megseOnButtonAction(ActionEvent event) throws IOException {
         Stage stage = (Stage) megseButton.getScene().getWindow();
         stage.close();
+        carDataListController.setButtonsEnabled();
     }
 
+    public void setCarDataListController(CarDataListController carDataListController) {
+        this.carDataListController = carDataListController;
+
+    }
 }
