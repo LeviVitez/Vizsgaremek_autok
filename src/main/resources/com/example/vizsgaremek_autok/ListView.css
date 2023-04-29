@@ -1,0 +1,7 @@
+.events-listview{
+-fx-background-color: #F0FFFF;
+}
+
+.events-listview .list-cell:odd, .events-listview .list-cell:even{
+-fx-background-color: #F0FFFF;
+}

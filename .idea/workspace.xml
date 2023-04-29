@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf3f7a0d-a79c-4a27-b172-14c40fe9865a" name="Changes" comment="CarDataList Restyle">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CalData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/EventResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__04__25__20_11__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023__04__25__20_11__Changes_.xml" afterDir="false" />
+    <list default="true" id="cf3f7a0d-a79c-4a27-b172-14c40fe9865a" name="Changes" comment="minor changes">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/ListView.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/AddEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/AddEventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vizsgaremek_autok/CarDataListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/AddEvent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/AddEvent.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/CarDataList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/vizsgaremek_autok/CarDataList.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -264,7 +259,56 @@
       <option name="project" value="LOCAL" />
       <updated>1682726432092</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="fxid added">
+      <created>1682774791075</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1682774791075</updated>
+    </task>
+    <task id="LOCAL-00026" summary="eventrequst added">
+      <created>1682774833272</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1682774833272</updated>
+    </task>
+    <task id="LOCAL-00027" summary="CalData class added">
+      <created>1682774866471</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1682774866471</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Vbox added">
+      <created>1682774884047</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1682774884047</updated>
+    </task>
+    <task id="LOCAL-00029" summary="load up eventlist with data">
+      <created>1682774934372</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1682774934372</updated>
+    </task>
+    <task id="LOCAL-00030" summary="EventResponse class added">
+      <created>1682774955690</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1682774955690</updated>
+    </task>
+    <task id="LOCAL-00031" summary="minor changes">
+      <created>1682774976520</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1682774976520</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -280,9 +324,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Car upload working" />
-    <MESSAGE value="fixing typo errors" />
-    <MESSAGE value="3rd scene implement" />
     <MESSAGE value="storing userId" />
     <MESSAGE value="making userid globally accessible" />
     <MESSAGE value="minor changes in the code" />
@@ -301,6 +342,13 @@
     <MESSAGE value="removed unused stuff" />
     <MESSAGE value="added registration link" />
     <MESSAGE value="CarDataList Restyle" />
-    <option name="LAST_COMMIT_MESSAGE" value="CarDataList Restyle" />
+    <MESSAGE value="fxid added" />
+    <MESSAGE value="eventrequst added" />
+    <MESSAGE value="CalData class added" />
+    <MESSAGE value="Vbox added" />
+    <MESSAGE value="load up eventlist with data" />
+    <MESSAGE value="EventResponse class added" />
+    <MESSAGE value="minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
   </component>
 </project>
