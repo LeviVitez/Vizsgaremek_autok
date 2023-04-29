@@ -11,8 +11,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -20,6 +22,7 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -82,7 +85,48 @@ public class CarDataListController implements Initializable {
     private Label licence_plate;
     @FXML
     private Label givenameTextField;
+    @FXML
+    private VBox eventListVbox;
+    @FXML
+    private ListView<String> eventListView;
+
     private LoginModell loginModell;
+    private static String titleStatic;
+    private static String commentStatic;
+    private static String startStatic;
+    private List<EventResponse> events;
+
+
+
+public String sendGetEventRequset() throws IOException {
+    URL url = new URL("http://localhost:3001/calendarEvent/" + loginModell.getLogiResponse().getId());
+
+    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+
+    httpURLConnection.setRequestMethod("GET");
+
+    String responseString = "";
+
+    if (httpURLConnection.getResponseCode() == 200) {
+
+        InputStream inputStream = httpURLConnection.getInputStream();
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+        StringBuilder response = new StringBuilder();
+        String line;
+        while ((line = bufferedReader.readLine()) != null) {
+            response.append(line);
+        }
+        bufferedReader.close();
+        responseString = response.toString();
+    } else {
+        responseString = "error";
+    }
+    return responseString;
+}
+    public CalData loadToEventPojo(String response) throws JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        return objectMapper.readValue(response, new TypeReference<>(){});
+    }
 
     public void setLoginModellForCarDataList(LoginModell loginModell) {
         this.loginModell = loginModell;
@@ -162,6 +206,24 @@ public class CarDataListController implements Initializable {
         carListImageView10.setImage(carListImage);
         carListImageView11.setImage(carListImage);
         carDataListImageView.setImage(carDataListImage);
+
+        Platform.runLater(()->{
+            try {
+                events = (loadToEventPojo(sendGetEventRequset())).getEventResponses();
+                loadUpEventListWithData();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+    public void loadUpEventListWithData (){
+    List<String> eventsStringList = new ArrayList<>();
+        for (EventResponse event: events) {
+            eventsStringList.add(String.format("%s %s %s",event.getTitle(),event.getComment(),event.getStart()));
+
+        }
+        eventListView.getItems().addAll(eventsStringList);
     }
 
     public void AddEventOnAction(ActionEvent event) throws IOException {
