@@ -11,16 +11,19 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import kong.unirest.Unirest;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -88,7 +91,7 @@ public class CarDataListController implements Initializable {
     @FXML
     private VBox eventListVbox;
     @FXML
-    private ListView<String> eventListView;
+    private ListView<EventResponse> eventListView;
 
     private LoginModell loginModell;
     private static String titleStatic;
@@ -211,26 +214,31 @@ public String sendGetEventRequset() throws IOException {
 
 
       loadEventsToList();
+
+        eventListView.setCellFactory(param -> new ListCell<EventResponse>() {
+            @Override
+            protected void updateItem(EventResponse item, boolean empty) {
+                super.updateItem(item, empty);
+
+                if (empty || item == null) {
+                    setText(null);
+                } else {
+                    setText(item.getTitle() + " " + item.getComment() + " " + item.getStart());
+                }
+            }
+        });
     }
 
     public void loadEventsToList(){
         Platform.runLater(()->{
             try {
                 events = (loadToEventPojo(sendGetEventRequset())).getEventResponses();
-                loadUpEventListWithData();
+                eventListView.getItems().clear();
+                eventListView.getItems().addAll(events);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         });
-    }
-
-    public void loadUpEventListWithData (){
-    List<String> eventsStringList = new ArrayList<>();
-        for (EventResponse event: events) {
-            eventsStringList.add(String.format("%s %s %s",event.getTitle(),event.getComment(),event.getStart()));
-
-        }
-        eventListView.getItems().addAll(eventsStringList);
     }
 
     public void AddEventOnAction(ActionEvent event) throws IOException {
@@ -269,6 +277,17 @@ public String sendGetEventRequset() throws IOException {
     }
 
     public void DeleteEventOnAction(ActionEvent event) {
+        if (eventListView.getSelectionModel().isEmpty()){
+            return;
+        }
+        int statusCode = Unirest.delete("http://localhost:3001/calendarEvent/"+eventListView.getSelectionModel().getSelectedItem().getCalId())
+                .header("Content-Type", "application/json").asJson().getStatus();
+        if (statusCode == 200) {
+            loadEventsToList();
+        }else {
+
+        }
+
     }
 }
 
