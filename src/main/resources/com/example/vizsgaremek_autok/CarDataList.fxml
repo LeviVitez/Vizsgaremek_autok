@@ -271,7 +271,7 @@
                 <Font size="15.0" />
             </font>
         </Button>
-        <AnchorPane layoutX="274.0" layoutY="109.0" prefHeight="439.0" prefWidth="322.0" style="-fx-background-color: #F0FFFF;">
+        <AnchorPane layoutX="274.0" layoutY="109.0" prefHeight="401.0" prefWidth="322.0" style="-fx-background-color: #F0FFFF;">
             <children>
                 <Label layoutX="86.0" layoutY="14.0" prefHeight="20.0" prefWidth="135.0" text="Kózelgő események!">
                     <font>
@@ -283,9 +283,9 @@
                         <Image url="@../../../../../../Images/calendar.png" />
                     </image>
                 </ImageView>
-            <VBox fx:id="eventListVbox" layoutY="48.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="322.0">
+            <VBox fx:id="eventListVbox" layoutY="41.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="322.0">
                <children>
-                  <ListView fx:id="eventListView" focusTraversable="false" mouseTransparent="true" prefHeight="392.0" prefWidth="322.0" styleClass="events-listview" stylesheets="@ListView.css" />
+                  <ListView fx:id="eventListView" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="322.0" styleClass="events-listview" stylesheets="@ListView.css" VBox.vgrow="ALWAYS" />
                </children>
             </VBox>
             </children>
@@ -294,5 +294,10 @@
          <font>
             <Font size="15.0" />
          </font></Button>
+      <Button fx:id="deleteEvent" layoutX="274.0" layoutY="518.0" mnemonicParsing="false" onAction="#DeleteEventOnAction" pickOnBounds="false" prefHeight="31.0" prefWidth="322.0" style="-fx-font-weight: bold; -fx-background-color: black;" text="Esemény törlése" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
